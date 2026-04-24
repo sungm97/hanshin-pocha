@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Hanshin Pocha</title>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#3d3833",
+                        "surface-container-low": "#1f1b17",
+                        "surface-container-high": "#2e2925",
+                        "background": "#171515",
+                        "on-surface": "#eae1da",
+                        "surface-dim": "#171515",
+                        "inverse-on-surface": "#34302b",
+                        "surface-container-lowest": "#171515",
+                        "outline-variant": "#6E4225",
+                        "surface": "#171515",
+                        "surface-container-highest": "#39342f",
+                        "primary-container": "#cfa670",
+                        "on-background": "#eae1da",
+                        "on-surface-variant": "#d2c4b6",
+                        "surface-variant": "#39342f",
+                        "surface-container": "#231f1b",
+                        "on-primary": "#6E4225",
+                        "tertiary": "#e9c28d",
+                        "primary": "#ecc189"
+                    },
+                    "fontFamily": {
+                        "headline": ["Montserrat", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Montserrat", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: theme('colors.background'); 
+            color: theme('colors.on-background');
+            font-family: theme('fontFamily.body');
+        }
+        
+        .glass-panel {
+            background-color: rgba(71, 54, 54, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(110, 66, 37, 0.15);
+        }
+
+        /* Hide scrollbar for category menu */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased overflow-x-hidden">
+
+    <nav class="fixed top-0 w-full z-50 glass-panel transition-all duration-300">
+        <div class="flex justify-between items-center px-6 md:px-8 py-4 w-full max-w-screen-2xl mx-auto">
+            <a href="index.html" class="text-xl font-headline font-semibold tracking-widest text-[#ecc189] uppercase">Hanshin Pocha</a>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-[#eae1da]/80 font-headline tracking-wide text-sm font-medium hover:text-[#ecc189] transition-colors duration-300">Our Story</a>
+                <a href="#" class="text-[#ecc189] font-headline tracking-wide text-sm font-semibold border-b border-[#ecc189] pb-0.5 transition-transform hover:scale-105">Menu</a>
+                <a href="index.html#location" class="text-[#eae1da]/80 font-headline tracking-wide text-sm font-medium hover:text-[#ecc189] transition-colors duration-300">Locations</a>
+                <a href="#" class="text-[#eae1da]/80 font-headline tracking-wide text-sm font-medium hover:text-[#ecc189] transition-colors duration-300">Reservations</a>
+            </div>
+            
+            <button class="hidden md:block px-6 py-2.5 bg-primary text-on-primary font-label text-xs uppercase tracking-[0.15em] rounded-sm hover:bg-primary-container hover:shadow-lg transition-all duration-300 font-semibold">
+                Order Now
+            </button>
+            
+            <button id="mobile-menu-btn" class="md:hidden text-primary p-2">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-0 w-full bg-background border-b border-outline-variant/30 shadow-2xl z-50">
+            <div class="flex flex-col px-6 py-4 space-y-4">
+                <a href="index.html" class="text-[#eae1da] font-headline text-lg">Our Story</a>
+                <a href="#" class="text-[#ecc189] font-headline text-lg">Menu</a>
+                <a href="index.html#location" class="text-[#eae1da] font-headline text-lg">Locations</a>
+                <a href="#" class="text-[#eae1da] font-headline text-lg">Reservations</a>
+                <button class="w-full mt-4 px-6 py-3 bg-primary text-on-primary font-label text-sm uppercase tracking-widest rounded-sm font-semibold">
+                    Order Now
+                </button>
+            </div>
+        </div>
+
+        <div class="w-full bg-background border-b border-outline-variant/20">
+                <div class="max-w-screen-xl mx-auto px-6 overflow-x-auto no-scrollbar">
+                <div class="flex space-x-10 py-4 min-w-max justify-center md:justify-center">
+                    <a href="#food" class="text-primary font-headline tracking-[0.15em] text-xs font-semibold uppercase">Food</a>
+                    <a href="#stews" class="text-on-surface-variant hover:text-primary transition-colors font-headline tracking-[0.15em] text-xs font-semibold uppercase">Soup & Stew</a>
+                    <a href="#drinks" class="text-on-surface-variant hover:text-primary transition-colors font-headline tracking-[0.15em] text-xs font-semibold uppercase">Soju & Beer</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="w-full pt-36 pb-24 px-6 md:px-12 max-w-screen-xl mx-auto">
+        
+        <section id="food" class="mb-24 mt-8">
+            <h2 class="text-center font-headline text-3xl font-light text-on-surface mb-16 tracking-widest uppercase border-b border-outline-variant/20 pb-4 max-w-xs mx-auto">Hanshin's Signature</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+                
+                <div class="flex flex-col group">
+                    <div class="relative w-full aspect-[4/3] mb-5 overflow-hidden rounded-sm bg-surface-container-low">
+                        <img src="images/ribs-1.jpeg" alt="Spicy Chicken Feet" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90">
+                    </div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-headline text-lg font-medium text-on-surface leading-tight">
+                            Spicy Pork Ribs <br>
+                            <span class="text-sm font-light text-on-surface-variant font-body mt-1 block">매운 돼지 갈비와 주먹밥</span>
+                        </h3>
+                        <span class="font-body text-primary font-medium">$28</span>
+                    </div>
+                    <p class="font-body font-light text-sm text-on-surface-variant mb-3">Super spicy and tender pork ribs. Served with seaweed tuna mayo rice ball.</p>
+                    <div class="flex gap-2">
+                        <span class="text-[10px] uppercase tracking-wider border border-[#ef4444] text-[#ef4444] px-1.5 py-0.5 rounded-sm w-max font-semibold">Hot</span>
+                        <span class="text-[10px] uppercase tracking-wider border border-primary text-primary px-1.5 py-0.5 rounded-sm w-max font-semibold">Signature</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col group">
+                    <div class="relative w-full aspect-[4/3] mb-5 overflow-hidden rounded-sm bg-surface-container-low">
+                        <img src="images/belly-1.jpeg" alt="Spicy Pork" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90">
+                    </div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-headline text-lg font-medium text-on-surface leading-tight">
+                            Pork Belly and Stir-fried Kimchi <br>
+                            <span class="text-sm font-light text-on-surface-variant font-body mt-1 block">삼겹살 김치볶음 </span>
+                        </h3>
+                        <span class="font-body text-primary font-medium">$26</span>
+                    </div>
+                    <p class="font-body font-light text-sm text-on-surface-variant mb-3">Stir fried pork shoulder in spicy gochujang sauce with caramelized onions and scallions.</p>
+                    <div class="flex gap-2">
+                        <span class="text-[10px] uppercase tracking-wider border border-[#ef4444] text-[#ef4444] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col group">
+                    <div class="relative w-full aspect-[4/3] mb-5 overflow-hidden rounded-sm bg-surface-container-low">
+                        <img src="images/pajeon-1.jpeg" alt="Pancake" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90">
+                    </div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-headline text-lg font-medium text-on-surface leading-tight">
+                            Seafood Scallion Pancake <br>
+                            <span class="text-sm font-light text-on-surface-variant font-body mt-1 block">해물 파전</span>
+                        </h3>
+                        <span class="font-body text-primary font-medium">$22</span>
+                    </div>
+                    <p class="font-body font-light text-sm text-on-surface-variant mb-3">Traditional Korean crispy pancake with assorted seafood (shrimp, squid) and abundant scallions.</p>
+                </div>
+
+                 <div class="flex flex-col group">
+                    <div class="relative w-full aspect-[4/3] mb-5 overflow-hidden rounded-sm bg-surface-container-low">
+                        <img src="images/chadol-1.jpg" alt="Bulgogi" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90">
+                    </div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-headline text-lg font-medium text-on-surface leading-tight">
+                            Chadol Baegi (Thinly Sliced Brisket) <br>
+                            <span class="text-sm font-light text-on-surface-variant font-body mt-1 block">차돌베기</span>
+                        </h3>
+                        <span class="font-body text-primary font-medium">$28</span>
+                    </div>
+                    <p class="font-body font-light text-sm text-on-surface-variant mb-3">Thinly sliced brisket grilled to perfection with assortment of complementary side dishes.</p>
+                </div>
+                <div class="flex flex-col group">
+                    <div class="relative w-full aspect-[4/3] mb-5 overflow-hidden rounded-sm bg-surface-container-low">
+                        <img src="images/bokki-2.jpg" alt="Bulgogi" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90">
+                    </div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-headline text-lg font-medium text-on-surface leading-tight">
+                            Tteok-Bokki <br>
+                            <span class="text-sm font-light text-on-surface-variant font-body mt-1 block">떡볶이</span>
+                        </h3>
+                        <span class="font-body text-primary font-medium">$28</span>
+                    </div>
+                    <p class="font-body font-light text-sm text-on-surface-variant mb-3">A beloved Korean street food, featuring chewy rice cakes in a spicy, flavorful sauce.</p>
+                </div>
+                <div class="flex flex-col group">
+                    <div class="relative w-full aspect-[4/3] mb-5 overflow-hidden rounded-sm bg-surface-container-low">
+                        <img src="images/bulgogi-1.jpg" alt="Bulgogi" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90">
+                    </div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-headline text-lg font-medium text-on-surface leading-tight">
+                            Bulgogi (Korean BBQ Beef) <br>
+                            <span class="text-sm font-light text-on-surface-variant font-body mt-1 block">철판 불고기</span>
+                        </h3>
+                        <span class="font-body text-primary font-medium">$28</span>
+                    </div>
+                    <p class="font-body font-light text-sm text-on-surface-variant mb-3">Grilled marinated thin sliced rib eye with onions, scallions, and mushrooms served on a hot plate.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="stews" class="mb-24 pt-12 border-t border-outline-variant/10">
+            <h2 class="text-center font-headline text-3xl font-light text-on-surface mb-16 tracking-widest uppercase border-b border-outline-variant/20 pb-4 max-w-xs mx-auto">Soup & Stew</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+                
+                <div class="flex flex-col group">
+                    <div class="relative w-full aspect-[4/3] mb-5 overflow-hidden rounded-sm bg-surface-container-low">
+                        <img src="https://images.unsplash.com/photo-1548943487-a2e4d43b485f?auto=format&fit=crop&q=80" alt="Army Stew" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90">
+                    </div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-headline text-lg font-medium text-on-surface leading-tight">
+                            Budae Jjigae / Army Stew <br>
+                            <span class="text-sm font-light text-on-surface-variant font-body mt-1 block">부대찌개</span>
+                        </h3>
+                        <span class="font-body text-primary font-medium">$34</span>
+                    </div>
+                    <p class="font-body font-light text-sm text-on-surface-variant mb-3">The most popular stew with spam, sausage, bacon, kimchi, baked bean, and ramen noodle.</p>
+                    <div class="flex gap-2">
+                        <span class="text-[10px] uppercase tracking-wider border border-[#ef4444] text-[#ef4444] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col group">
+                    <div class="relative w-full aspect-[4/3] mb-5 overflow-hidden rounded-sm bg-surface-container-low">
+                        <img src="https://images.unsplash.com/photo-1626804475297-41609ea084eb?auto=format&fit=crop&q=80" alt="Gamjatang" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90">
+                    </div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-headline text-lg font-medium text-on-surface leading-tight">
+                            Gamjatang Hearth <br>
+                            <span class="text-sm font-light text-on-surface-variant font-body mt-1 block">감자탕</span>
+                        </h3>
+                        <span class="font-body text-primary font-medium">$38</span>
+                    </div>
+                    <p class="font-body font-light text-sm text-on-surface-variant mb-3">A rich, deeply savory pork bone stew with tender potatoes, perilla leaves, and wild sesame seeds.</p>
+                </div>
+
+                <div class="flex flex-col group">
+                    <div class="relative w-full aspect-[4/3] mb-5 overflow-hidden rounded-sm bg-surface-container-low">
+                        <img src="https://images.unsplash.com/photo-1544378730-8b5104b20cc3?auto=format&fit=crop&q=80" alt="Oden Tang" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90">
+                    </div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-headline text-lg font-medium text-on-surface leading-tight">
+                            Fish Cake Soup <br>
+                            <span class="text-sm font-light text-on-surface-variant font-body mt-1 block">한신 오뎅탕</span>
+                        </h3>
+                        <span class="font-body text-primary font-medium">$30</span>
+                    </div>
+                    <p class="font-body font-light text-sm text-on-surface-variant mb-3">Mixed fish cake soup with various shapes of eomuk in a clear, deeply umami dashi broth.</p>
+                </div>
+
+            </div>
+        </section>
+        
+        <section id="drinks" class="mb-12 pt-12 border-t border-outline-variant/10">
+            <h2 class="text-center font-headline text-3xl font-light text-on-surface mb-16 tracking-widest uppercase border-b border-outline-variant/20 pb-4 max-w-xs mx-auto">Soju & Beer</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-10 max-w-4xl mx-auto">
+                <div class="border-b border-outline-variant/10 pb-4">
+                    <div class="flex justify-between items-baseline mb-1">
+                        <h4 class="font-headline text-lg text-on-surface">Chamisul Fresh <span class="font-body text-sm font-light text-on-surface-variant ml-2">참이슬 프레시</span></h4>
+                        <span class="font-body text-primary font-medium">$14</span>
+                    </div>
+                    <p class="font-body font-light text-sm text-on-surface-variant">Classic clean soju, highly filtered.</p>
+                </div>
+                
+                <div class="border-b border-outline-variant/10 pb-4">
+                    <div class="flex justify-between items-baseline mb-1">
+                        <h4 class="font-headline text-lg text-on-surface">Artisan Makgeolli <span class="font-body text-sm font-light text-on-surface-variant ml-2">생막걸리</span></h4>
+                        <span class="font-body text-primary font-medium">$20</span>
+                    </div>
+                    <p class="font-body font-light text-sm text-on-surface-variant">Unfiltered, lightly sparkling rice wine.</p>
+                </div>
+
+                <div class="border-b border-outline-variant/10 pb-4">
+                    <div class="flex justify-between items-baseline mb-1">
+                        <h4 class="font-headline text-lg text-on-surface">Bokbunja <span class="font-body text-sm font-light text-on-surface-variant ml-2">복분자주</span></h4>
+                        <span class="font-body text-primary font-medium">$18</span>
+                    </div>
+                    <p class="font-body font-light text-sm text-on-surface-variant">Korean black raspberry wine, sweet and rich.</p>
+                </div>
+
+                <div class="border-b border-outline-variant/10 pb-4">
+                    <div class="flex justify-between items-baseline mb-1">
+                        <h4 class="font-headline text-lg text-on-surface">Cass Draft <span class="font-body text-sm font-light text-on-surface-variant ml-2">카스 생맥주</span></h4>
+                        <span class="font-body text-primary font-medium">$7</span>
+                    </div>
+                    <p class="font-body font-light text-sm text-on-surface-variant">Crisp, refreshing Korean pale lager.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-[#171515] w-full rounded-none border-t border-outline-variant/20 relative z-10">
+        <div class="px-6 md:px-12 py-12 max-w-screen-2xl mx-auto text-center md:text-left flex flex-col md:flex-row justify-between items-center">
+            <p class="font-body text-xs font-light text-[#eae1da]/50">
+                © 2024 Hanshin Pocha. All rights reserved. 1918 S Arlington Heights Rd, IL 60005.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = btn.querySelector('span');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.textContent = 'menu';
+            } else {
+                icon.textContent = 'close';
+            }
+        });
+    </script>
+</body>
+</html>

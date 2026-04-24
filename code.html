@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hanshin Pocha - The Culinary Alchemist</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Plus+Jakarta+Sans:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#563c13",
+                        "surface-bright": "#3d3833",
+                        "on-secondary-container": "#e1aa82",
+                        "on-secondary-fixed": "#301400",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary": "#4a280a",
+                        "on-error": "#690005",
+                        "surface-container-low": "#1f1b17",
+                        "on-primary-fixed": "#291800",
+                        "surface-container-high": "#2e2925",
+                        "background": "#473636",
+                        "tertiary-fixed-dim": "#e7c08b",
+                        "on-secondary-fixed-variant": "#653d1e",
+                        "on-tertiary": "#432c04",
+                        "tertiary-fixed": "#ffddb2",
+                        "on-surface": "#eae1da",
+                        "primary-fixed": "#ffddb4",
+                        "surface-dim": "#473636",
+                        "secondary": "#f4bb92",
+                        "inverse-on-surface": "#34302b",
+                        "surface-container-lowest": "#171515",
+                        "outline-variant": "#6E4225",
+                        "error": "#ffb4ab",
+                        "surface": "#473636",
+                        "inverse-primary": "#79582a",
+                        "surface-container-highest": "#39342f",
+                        "primary-container": "#cfa670",
+                        "on-background": "#eae1da",
+                        "on-surface-variant": "#d2c4b6",
+                        "surface-variant": "#39342f",
+                        "on-tertiary-fixed-variant": "#5c4218",
+                        "on-primary-fixed-variant": "#5e4114",
+                        "on-tertiary-fixed": "#291800",
+                        "tertiary": "#e9c28d",
+                        "surface-container": "#231f1b",
+                        "surface-tint": "#eabf87",
+                        "primary-fixed-dim": "#eabf87",
+                        "on-primary": "#6E4225",
+                        "inverse-surface": "#eae1da",
+                        "tertiary-container": "#cca774",
+                        "error-container": "#93000a",
+                        "outline": "#9b8f82",
+                        "secondary-container": "#653d1e",
+                        "secondary-fixed": "#ffdcc5",
+                        "secondary-fixed-dim": "#f4bb92",
+                        "on-primary-container": "#583b0f",
+                        "primary": "#ecc189"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {},
+                    "fontFamily": {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Plus Jakarta Sans", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+            font-family: theme('fontFamily.body');
+        }
+        
+        .glass-overlay {
+            background: linear-gradient(135deg, rgba(23, 19, 15, 0.7) 0%, rgba(31, 27, 23, 0.4) 100%);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .ambient-glow {
+            box-shadow: 0 0 60px rgba(234, 225, 218, 0.06);
+        }
+
+        .ghost-border {
+            border: 1px solid rgba(79, 69, 58, 0.15);
+        }
+
+        .text-gradient-primary {
+            background: linear-gradient(to right, theme('colors.primary'), theme('colors.primary-container'));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+<!-- TopNavBar (Shared Component) -->
+<nav class="fixed top-0 w-full z-50 bg-[#473636]/70 backdrop-blur-lg">
+<div class="flex justify-between items-center px-8 py-5 w-full max-w-screen-2xl mx-auto border-b border-[#6E4225]/15">
+<div class="text-2xl font-headline italic text-[#ecc189]">Hanshin Pocha</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-[#ecc189] font-headline tracking-tight text-lg font-semibold border-b-2 border-[#ecc189] pb-1 scale-95 active:scale-90 transition-transform" href="#">Our Story</a>
+<a class="text-[#eae1da]/80 font-headline tracking-tight text-lg font-medium hover:text-[#ecc189] hover:bg-[#1f1b17]/50 transition-all duration-300 ease-in-out px-3 py-1 rounded" href="#">Menu</a>
+<a class="text-[#eae1da]/80 font-headline tracking-tight text-lg font-medium hover:text-[#ecc189] hover:bg-[#1f1b17]/50 transition-all duration-300 ease-in-out px-3 py-1 rounded" href="#">Locations</a>
+<a class="text-[#eae1da]/80 font-headline tracking-tight text-lg font-medium hover:text-[#ecc189] hover:bg-[#1f1b17]/50 transition-all duration-300 ease-in-out px-3 py-1 rounded" href="#">Reservations</a>
+</div>
+<button class="hidden md:block px-6 py-2 bg-primary text-on-primary font-label text-sm uppercase tracking-[0.1em] rounded-sm hover:bg-primary-container transition-colors duration-300">
+                Order Now
+            </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="w-full">
+<!-- 1. Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center pt-24 pb-16 px-6 md:px-12 lg:px-24">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0 overflow-hidden">
+<img alt="Atmospheric dimly lit high-end Korean pocha interior with dark walnut wood panels, warm amber lighting, empty tables set for dinner" class="w-full h-full object-cover opacity-100" data-alt="Atmospheric dimly lit high-end Korean pocha interior with dark walnut wood panels, warm amber lighting, empty tables set for dinner" src="images/main-1.png"/>
+<div class="absolute inset-0 bg-gradient-to-b from-background/00 via-background/00 to-background"></div>
+</div>
+<div class="relative z-10 max-w-4xl mx-auto text-center mt-20">
+<p class="font-label text-primary text-sm uppercase tracking-[0.1em] mb-6">Est. 1988</p>
+<h1 class="font-headline text-5xl md:text-7xl lg:text-8xl text-on-surface leading-tight mb-8">
+                    A Narrative in Every <span class="text-gradient-primary italic">Sip and Bite</span>
+</h1>
+<p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl mx-auto leading-relaxed mb-12">
+                    Step out of the city and into the warmth. A culinary journal of Seoul's finest street food, reimagined for the modern palate.
+                </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+<button class="px-8 py-4 bg-primary text-on-primary font-label text-sm uppercase tracking-[0.1em] rounded-sm hover:bg-primary-container transition-colors duration-300">
+                        Explore Menu
+                    </button>
+<button class="px-8 py-4 font-headline text-lg text-primary border-b-2 border-primary/30 hover:border-primary pb-2 transition-colors duration-300">
+                        Book a Table
+                    </button>
+</div>
+</div>
+</section>
+<!-- 2. Story Section -->
+<section class="bg-[#171515] py-24 px-6 md:px-12 lg:px-24 max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+<!-- Left: Text content -->
+<div class="lg:col-span-5 space-y-8">
+<p class="font-label text-tertiary text-sm uppercase tracking-[0.1em]">The Origin</p>
+<h2 class="font-headline text-4xl md:text-5xl text-on-surface leading-tight">The Hearth of <br/><span class="italic text-primary">Hanshin</span></h2>
+<div class="space-y-6 font-body text-lg text-on-surface-variant leading-relaxed">
+<p>
+                            It began not with a grand vision, but with a single pot simmering on a cold winter night in Seoul. The warmth of the broth drew strangers closer, turning them into confidants.
+                        </p>
+<p>
+                            Today, we recreate that intimacy. Our space is designed to feel like an extension of that original hearth—dark walnut, amber lights, and the clinking of glasses narrating stories untold.
+                        </p>
+</div>
+<div class="pt-4">
+<a class="inline-flex items-center gap-2 font-headline text-lg text-primary border-b-2 border-primary/30 pb-1 hover:border-primary transition-colors" href="#">
+                            Read the Full Story <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Right: Mixed Media / Asymmetric Grid -->
+<div class="lg:col-span-7 relative h-[600px]">
+<!-- Main large image -->
+<div class="absolute top-0 right-0 w-3/4 h-4/5 bg-surface-container-low rounded-md overflow-hidden ghost-border z-10">
+<img alt="Chef cooking in a warm dimly lit kitchen with steam rising from hot pots, cinematic mood lighting" class="w-full h-full object-cover opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700" data-alt="Chef cooking in a warm dimly lit kitchen with steam rising from hot pots, cinematic mood lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpIxWF_ihI5FrdRfceP_SOl-1XYnjnr1gCqKFXHAODDqzNu_i9jgaSyjkMwBUvtHHpd6-pzCKgMv5fI_a2IYwaJN9wMrytjor5GExLxZbSmNpQbVOvYDtpDUzk7JglkZ4ACIY_WLWPgLGfsJQ49zFHv-RMk6TrHq8WHt-XQO1HZ08pqUOVn9n_aI8OK_80dJfOTJkB3aN30uoOD1yGGkYa92VDnRCevq9f6jagKq23tk-e_CTZHNN5Ut9CHbgWccZ_NS2xXg1niaKv"/>
+</div>
+<!-- Overlapping small image -->
+<div class="absolute bottom-0 left-0 w-1/2 h-1/2 bg-surface-container-high rounded-md p-2 ghost-border z-20 ambient-glow transform -translate-y-12">
+<img alt="Close up of a traditional Korean ceramic bowl filled with spicy red stew, steam rising, dark background" class="w-full h-full object-cover rounded-sm" data-alt="Close up of a traditional Korean ceramic bowl filled with spicy red stew, steam rising, dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnyVwQY442lAvqvUGZMxkRqhcr4JsNsxGERDp-kXTlMvQ5xhjiqzNHqJ3AdwCD4JR6x_W4X9t2a4VTScAFT2E2Lx0ENDJOGdf7YLod-vG6I9BbRPvhD5YVSuaE75t3nYCPCQeVfBnyQW5WUewOgtbeh5MnarBZlV_lsfhtDeDeTqOVAcZxirnmaexejBSBNpM_wyP-Lfm60Ox_rA7pG1SAQqp4xWuFrP_fyYZktELiqr_pf9JI4VNvhyLSraoGy4Qb2A7z4B3SsibC"/>
+</div>
+<!-- Floating text block -->
+<div class="absolute top-1/4 -left-8 bg-surface-container/90 backdrop-blur-md p-6 rounded-sm ghost-border z-30 max-w-[200px]">
+<p class="font-headline italic text-primary text-xl">"A sanctuary for the night owls and the flavor seekers."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Menu Preview Section -->
+<section class="py-24 bg-surface-container-lowest">
+<div class="max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-xl">
+<p class="font-label text-tertiary text-sm uppercase tracking-[0.1em] mb-4">Curated Selections</p>
+<h2 class="font-headline text-4xl md:text-5xl text-on-surface leading-tight">Chapters of <span class="italic text-primary">Flavor</span></h2>
+</div>
+<button class="px-6 py-2 bg-transparent text-primary font-label text-sm uppercase tracking-[0.1em] border border-outline-variant rounded-sm hover:bg-surface-container-low transition-colors duration-300">
+                        View Full Menu
+                    </button>
+</div>
+<!-- Editorial Cards Layout -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+<!-- Card 1 -->
+<div class="group cursor-pointer">
+<div class="relative h-80 mb-6 overflow-hidden rounded-md bg-surface-container-low ghost-border">
+<img alt="High-end presentation of Korean spicy chicken feet on a dark ceramic plate, garnished with sesame seeds, dramatic top-down lighting" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90" data-alt="High-end presentation of Korean spicy chicken feet on a dark ceramic plate, garnished with sesame seeds, dramatic top-down lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq6c7iSjC1W6REO3zoIF6yewfvrfzzeL0A3RvzAKBWe6aJG-c96for-Ccw6WZvQPoDyMMfHYzsFajwAuI8FRcIoZnIRvEgdeT2uPmaBod4Q3hKa5vve-pmmBhWNH4qxW1kPak5nnQls0AVCiUJKhu0ZHr6BleFjJvkAIZCV5c-94x8tTud7Dibuj34KhAStMas0-7dLI0tBYBqUQF-d7CIQPR-VxO-fFlY5SeIAHHKBZzpwUCsKQeiGksAd9smWqQCsu6cR7jk7xQJ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="pl-4 border-l border-primary/20 -mt-12 relative z-10 bg-surface-container-lowest/80 backdrop-blur-sm p-4 w-11/12">
+<p class="font-label text-on-surface-variant text-xs uppercase tracking-widest mb-2">Signature</p>
+<h3 class="font-headline text-2xl text-on-surface mb-2">Hanshin Dakbal</h3>
+<p class="font-body text-on-surface-variant leading-relaxed line-clamp-2">Our legendary spicy chicken feet, slow-cooked to a tender, fiery perfection that demands another drink.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group cursor-pointer md:mt-12">
+<div class="relative h-80 mb-6 overflow-hidden rounded-md bg-surface-container-low ghost-border">
+<img alt="Rich hearty Korean pork bone stew in a black cast iron pot, bubbling hot, dark wood table setting" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90" data-alt="Rich hearty Korean pork bone stew in a black cast iron pot, bubbling hot, dark wood table setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARBCWC3P-2SF16xAPj03yjNkyAjDZXS-IKOQAQh0FSuk0AitAERgXAaFkLr387_RKDfNGIIjzsSN82uLkcUSWTyqXhOqPrg1nWUjo8rUxgEpB7m1wgj_UhTkvg0sHIivmmQLAs82ruEg8uM59qwlmUZfpbqzGu_PrB7vgL-G-GgkPf-Ed666_-GOGFkGqLS6dSQdCR_Zrwa9cDqXZkmI5vyZ57uG7PflV5IebYFHpZW2P5LUpxYN-HC-egYmNr95doMnfV2CFKMUJc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="pl-4 border-l border-primary/20 -mt-12 relative z-10 bg-surface-container-lowest/80 backdrop-blur-sm p-4 w-11/12">
+<p class="font-label text-on-surface-variant text-xs uppercase tracking-widest mb-2">Comfort</p>
+<h3 class="font-headline text-2xl text-on-surface mb-2">Gamjatang Hearth</h3>
+<p class="font-body text-on-surface-variant leading-relaxed line-clamp-2">A rich, deeply savory pork bone stew with tender potatoes and perilla leaves, simmering with warmth.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group cursor-pointer">
+<div class="relative h-80 mb-6 overflow-hidden rounded-md bg-surface-container-low ghost-border">
+<img alt="Elegant pour of traditional Korean rice wine (makgeolli) into a rustic brass bowl, dark moody tavern setting" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90" data-alt="Elegant pour of traditional Korean rice wine (makgeolli) into a rustic brass bowl, dark moody tavern setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7d8kUxZ0ST1xvovlblw4vQyLDRbzQdZN_NP0uRu01dIwBkyBjAaFw9ymsMClgTHkrjtFAKLMQ_WaL3jv51hfnYDS3K0z-ZNQ3V9Mr7OiILFcQxR6vGxdohfR7tiDT307Z5xJcLFHr7PjofpmIJS7knG53op889uwU8LBM2FLf0bgD7ptdXaUKSWRNQxDQT4aBNNHXqpioGmlJEDxp6jPubK0zYMjcEb4o4VlJpu2flko1tOWSww2xoyr76ZfespbaYStwy_sm_RDe"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="pl-4 border-l border-primary/20 -mt-12 relative z-10 bg-surface-container-lowest/80 backdrop-blur-sm p-4 w-11/12">
+<p class="font-label text-on-surface-variant text-xs uppercase tracking-widest mb-2">Libations</p>
+<h3 class="font-headline text-2xl text-on-surface mb-2">Artisan Makgeolli</h3>
+<p class="font-body text-on-surface-variant leading-relaxed line-clamp-2">Cloudy, effervescent rice wine sourced from independent brewers, the perfect companion to spice.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-[#ffffff] w-full rounded-none border-t border-[#6E4225]/10">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-12 py-20 w-full max-w-screen-2xl mx-auto">
+<!-- Brand -->
+<div>
+<h4 class="text-xl font-headline text-[#ecc189] uppercase tracking-widest mb-6">Hanshin Pocha</h4>
+<p class="font-body text-md leading-relaxed text-[#eae1da]/60 max-w-xs">
+                    Crafting narratives through fire, flavor, and the warmth of shared spaces since 1988.
+                </p>
+</div>
+<!-- Links -->
+<div class="flex flex-col space-y-4">
+<p class="font-label text-xs uppercase tracking-widest text-[#ecc189] mb-2">Explore</p>
+<a class="font-body text-md leading-relaxed text-[#eae1da]/60 hover:text-[#ecc189] transition-colors duration-200 opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-body text-md leading-relaxed text-[#eae1da]/60 hover:text-[#ecc189] transition-colors duration-200 opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="font-body text-md leading-relaxed text-[#eae1da]/60 hover:text-[#ecc189] transition-colors duration-200 opacity-80 hover:opacity-100" href="#">Press Kit</a>
+<a class="font-body text-md leading-relaxed text-[#eae1da]/60 hover:text-[#ecc189] transition-colors duration-200 opacity-80 hover:opacity-100" href="#">Contact Us</a>
+</div>
+<!-- Contact / Newsletter area placeholder -->
+<div>
+<p class="font-label text-xs uppercase tracking-widest text-[#ecc189] mb-4">Join the Chronicle</p>
+<div class="border-b border-[#6E4225]/50 pb-2 flex justify-between items-center group">
+<input class="bg-transparent border-none focus:ring-0 text-[#eae1da] placeholder-[#eae1da]/30 font-body w-full p-0" placeholder="Your email address" type="email"/>
+<button class="text-[#ecc189] opacity-80 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Copyright -->
+<div class="px-12 pb-8 max-w-screen-2xl mx-auto border-t border-[#6E4225]/10 pt-8 mt-4 text-center md:text-left">
+<p class="font-body text-sm leading-relaxed text-[#eae1da]/60 opacity-80 hover:opacity-100 transition-opacity">
+                © 2024 Hanshin Pocha. Crafted for the Culinary Alchemist.
+            </p>
+</div>
+</footer>
+</body></html>
