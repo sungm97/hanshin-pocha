@@ -82,23 +82,29 @@
         }
         /* Scroll Animation Classes */
         .reveal-color {
-            filter: grayscale(100%);
-            opacity: 0.7;
-            transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+            filter: grayscale(100%) !important;
+            opacity: 0.7 !important;
+            /* Only target filter and opacity so it doesn't break Tailwind's hover transforms */
+            transition-property: filter, opacity !important;
+            transition-duration: 1.2s !important;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
         }
         .reveal-color.in-view {
-            filter: grayscale(0%);
-            opacity: 1;
+            filter: grayscale(0%) !important;
+            opacity: 1 !important;
         }
 
         .reveal-slide-up {
-            opacity: 0;
-            transform: translateY(60px);
-            transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0 !important;
+            transform: translateY(60px) !important;
+            /* Explicitly define properties so inline transition-delays aren't overwritten */
+            transition-property: opacity, transform, transition-delay !important;
+            transition-duration: 1s !important;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
         }
         .reveal-slide-up.in-view {
-            opacity: 1;
-            transform: translateY(0);
+            opacity: 1 !important;
+            transform: translateY(0) !important;
         }
     </style>
 </head>
@@ -185,7 +191,7 @@
 
                 <div class="lg:col-span-7 relative h-[500px] md:h-[650px] w-full">
                     <div class="absolute top-0 right-0 w-4/5 h-4/5 bg-surface-container-low rounded-md overflow-hidden ghost-border z-10">
-                        <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&q=80" alt="Chef cooking in kitchen" class="w-full h-full object-cover reveal-color">                    </div>
+                        <img src="images/about-1.jpeg" alt="Chef cooking in kitchen" class="w-full h-full object-cover reveal-color">                    </div>
                     <div class="absolute bottom-0 left-0 w-3/5 h-3/5 bg-surface-container-high rounded-md p-2 ghost-border z-20 ambient-glow transform -translate-y-8 md:-translate-y-16">
                         <img src="images/soju-1.jpeg" alt="Korean stew" class="w-full h-full object-cover rounded-sm">
                     </div>
@@ -206,7 +212,7 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    <div class="group cursor-pointer">
+                    <div class="group cursor-pointer reveal-slide-up">
                         <div class="relative h-[400px] mb-6 overflow-hidden rounded-sm bg-surface-container-low ghost-border">
                             <img src="images/chicken-1.jpeg" alt="Korean Fried Chicken" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-80 group-hover:opacity-100">
                             <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
@@ -219,7 +225,7 @@
                         <div class="group cursor-pointer reveal-slide-up" style="transition-delay: 0ms;"></div>
                     </div>
 
-                    <div class="group cursor-pointer md:mt-16">
+                    <div class="group cursor-pointer md:mt-16 reveal-slide-up md:delay-200">
                         <div class="relative h-[400px] mb-6 overflow-hidden rounded-sm bg-surface-container-low ghost-border">
                             <img src="images/stew-1.png" alt="Pork Stew" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-80 group-hover:opacity-100">
                             <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
@@ -232,7 +238,7 @@
                         <div class="group cursor-pointer md:mt-16 reveal-slide-up" style="transition-delay: 200ms;"></div>
                     </div>
 
-                    <div class="group cursor-pointer">
+                    <div class="group cursor-pointer reveal-slide-up md:delay-500">
                         <div class="relative h-[400px] mb-6 overflow-hidden rounded-sm bg-surface-container-low ghost-border">
                             <img src="images/bokki-1.jpeg" alt="Drinks" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-80 group-hover:opacity-100">
                             <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
@@ -386,7 +392,7 @@
         const observerOptions = {
             root: null,
             rootMargin: '0px',
-            threshold: 0.2 // Triggers the animation when 20% of the element is visible
+            threshold: 0.25 // Triggers the animation when 10% of the element is visible
         };
 
         const scrollObserver = new IntersectionObserver((entries) => {
