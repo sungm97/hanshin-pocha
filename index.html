@@ -9,7 +9,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
     
     <script id="tailwind-config">
@@ -46,13 +46,31 @@
                     "fontFamily": {
                         "headline": ["Montserrat", "sans-serif"],
                         "body": ["Inter", "sans-serif"],
-                        "label": ["Montserrat", "sans-serif"]
+                        "label": ["Montserrat", "sans-serif"],
+                        "hero": ["'Playfair Display'", "serif"],
+                        "korean": ["'Euljiro'", "sans-serif"],
+                        "brand": ["'RecipeKorea'", "serif"]
                     }
                 },
             },
         }
     </script>
     <style>
+        @font-face {
+            font-family: 'Euljiro';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/BMEULJIRO.woff') format('woff');
+            font-weight: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'RecipeKorea';
+            src: url('fonts/RecipeKorea font.otf') format('opentype'),
+                url('fonts/RecipeKorea font.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
         body {
             background-color: theme('colors.background');
             color: theme('colors.on-background');
@@ -67,6 +85,26 @@
             background: linear-gradient(to right, theme('colors.primary'), theme('colors.primary-container'));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+        .hero-accent {
+            font-family: theme('fontFamily.hero');
+            font-style: italic;
+            font-weight: 500;
+            color: #fff8ea;
+            text-shadow: 0 2px 24px rgba(0, 0, 0, 0.5), 0 0 40px rgba(236, 193, 137, 0.4);
+            letter-spacing: 0.01em;
+            position: relative;
+            display: inline-block;
+        }
+        .hero-accent::after {
+            content: "";
+            position: absolute;
+            left: 8%;
+            right: 8%;
+            bottom: 0.05em;
+            height: 2px;
+            background: linear-gradient(to right, transparent, theme('colors.primary'), transparent);
         }
 
         .ambient-glow {
@@ -111,21 +149,15 @@
 <body class="antialiased overflow-x-hidden">
 
     <nav class="fixed top-0 w-full z-50 glass-panel transition-all duration-300">
-        <div class="flex justify-between items-center px-6 md:px-8 py-4 w-full max-w-screen-2xl mx-auto">
-            <div class="text-xl font-headline font-semibold tracking-widest text-[#ecc189] uppercase">Hanshin Pocha</div>
+        <div class="flex justify-between items-center px-6 md:px-8 py-2 w-full max-w-screen-2xl mx-auto">
+            <div class="text-4xl font-korean tracking-wider text-[#ecc189] leading-none">한신포차</div>
             
             <div class="hidden md:flex items-center space-x-8">
                 <a href="#" class="text-[#ecc189] font-headline tracking-wide text-sm font-semibold border-b border-[#ecc189] pb-0.5 transition-transform hover:scale-105">Our Story</a>
                 <a href="menu.html" class="text-[#eae1da]/80 font-headline tracking-wide text-sm font-medium hover:text-[#ecc189] transition-colors duration-300">Menu</a>
-                <a href="gallery.html" class="text-[#eae1da]/80 font-headline tracking-wide text-sm font-medium hover:text-[#ecc189] transition-colors duration-300">Gallery</a>
                 <a href="#location" class="text-[#eae1da]/80 font-headline tracking-wide text-sm font-medium hover:text-[#ecc189] transition-colors duration-300">Locations</a>
-                <a href="#" class="text-[#eae1da]/80 font-headline tracking-wide text-sm font-medium hover:text-[#ecc189] transition-colors duration-300">Reservations</a>
             </div>
-            
-            <button class="hidden md:block px-6 py-2.5 bg-primary text-on-primary font-label text-xs uppercase tracking-[0.15em] rounded-sm hover:bg-primary-container hover:shadow-lg transition-all duration-300 font-semibold">
-                Order Now
-            </button>
-            
+
             <button id="mobile-menu-btn" class="md:hidden text-primary p-2">
                 <span class="material-symbols-outlined text-3xl">menu</span>
             </button>
@@ -135,12 +167,7 @@
             <div class="flex flex-col px-6 py-4 space-y-4">
                 <a href="#" class="text-[#ecc189] font-headline text-lg">Our Story</a>
                 <a href="menu.html" class="text-[#eae1da] font-headline text-lg">Menu</a>
-                <a href="gallery.html" class="text-[#eae1da] font-headline text-lg">Gallery</a>
                 <a href="#location" class="text-[#eae1da] font-headline text-lg">Locations</a>
-                <a href="#" class="text-[#eae1da] font-headline text-lg">Reservations</a>
-                <button class="w-full mt-4 px-6 py-3 bg-primary text-on-primary font-label text-sm uppercase tracking-widest rounded-sm font-semibold">
-                    Order Now
-                </button>
             </div>
         </div>
     </nav>
@@ -157,8 +184,8 @@
     <div class="relative z-10 max-w-4xl mx-auto text-center mt-32">
         <!--p class="font-label text-primary text-xs uppercase tracking-[0.2em] mb-6 font-semibold">Est. 1988</p-->
         
-        <h1 class="font-headline text-6xl md:text-7xl lg:text-8xl font-light text-on-surface leading-none -mb-8 drop-shadow-lg relative z-10">
-            Hanshin Pocha <span class="text-gradient-primary font-medium italic">Pocha</span>
+        <h1 class="font-brand text-6xl md:text-7xl lg:text-8xl text-[#ecc189] tracking-wider leading-tight mb-8 drop-shadow-lg relative z-10">
+            Hanshin Pocha
         </h1>
         
         <p class="font-body text-lg md:text-xl font-light text-on-surface-variant max-w-2xl mx-auto leading-relaxed mb-24 drop-shadow-md">
@@ -168,9 +195,6 @@
             <a href="menu.html" class="w-full sm:w-auto px-10 py-4 bg-primary text-on-primary font-label text-xs uppercase tracking-[0.15em] font-semibold rounded-sm hover:bg-primary-container transition-colors duration-300 text-center flex items-center justify-center">
                 Explore Menu
             </a>
-            <button class="w-full sm:w-auto px-8 py-4 font-headline text-lg text-primary border-b border-primary/30 hover:border-primary pb-2 transition-colors duration-300">
-                Book a Table
-            </button>
         </div>
     </div>
 </section>
@@ -229,13 +253,13 @@
 
                     <div class="group cursor-pointer md:mt-16 reveal-slide-up md:delay-200">
                         <div class="relative h-[400px] mb-6 overflow-hidden rounded-sm bg-surface-container-low ghost-border">
-                            <img src="images/stew-1.png" alt="Pork Stew" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-80 group-hover:opacity-100">
+                            <img src="images/chadol-2.jpg" alt="Pork Stew" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-80 group-hover:opacity-100">
                             <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
                         </div>
                         <div class="pl-5 border-l border-primary/30 -mt-16 relative z-10 bg-surface-container-lowest/90 backdrop-blur-md p-6 w-11/12 mx-auto shadow-2xl">
                             <p class="font-label text-primary/80 text-[10px] font-semibold uppercase tracking-[0.2em] mb-3">Comfort</p>
-                            <h3 class="font-headline font-medium text-2xl text-on-surface mb-3">Spicy Seafood Stew</h3>
-                            <p class="font-body text-on-surface-variant font-light leading-relaxed text-sm">A rich, deeply savory seafood stew with tender vegetables and perilla leaves, simmering with warmth.</p>
+                            <h3 class="font-headline font-medium text-2xl text-on-surface mb-3">Beef Brisket</h3>
+                            <p class="font-body text-on-surface-variant font-light leading-relaxed text-sm">Thinly sliced beef brisket cooked table side, Korean BBQ style, served with variety of side dishes.</p>
                         </div>
                         <div class="group cursor-pointer md:mt-16 reveal-slide-up" style="transition-delay: 200ms;"></div>
                     </div>
@@ -337,23 +361,13 @@
     </main>
 
     <footer class="bg-[#171515] w-full rounded-none border-t border-outline-variant/20 relative z-10">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-16 px-6 md:px-12 py-24 w-full max-w-screen-2xl mx-auto">
-            
+        <div class="px-6 md:px-12 py-24 w-full max-w-screen-2xl mx-auto">
+
             <div>
-                <h4 class="text-xl font-headline font-semibold text-[#ecc189] uppercase tracking-widest mb-6">Hanshin Pocha</h4>
+                <h4 class="text-4xl font-korean text-[#ecc189] tracking-wider mb-6">한신포차</h4>
                 <p class="font-body text-base font-light leading-relaxed text-[#eae1da]/70 max-w-sm">
                     Creating modern korean pocha experience with bold flavors and vibrant atmosphere. Join us for unforgettable nights of warmth, authentic flavors, and shared stories.
                 </p>
-            </div>
-                   
-            <div>
-                <p class="font-label text-xs uppercase font-semibold tracking-[0.2em] text-[#ecc189] mb-6">Join the email list!</p>
-                <div class="border-b border-primary/30 pb-3 flex justify-between items-center group focus-within:border-primary transition-colors">
-                    <input type="email" placeholder="Your email address" class="bg-transparent border-none focus:ring-0 text-base text-[#eae1da] placeholder-[#eae1da]/30 font-body font-light w-full p-0">
-                    <button class="text-primary/70 group-hover:text-primary transition-colors">
-                        <span class="material-symbols-outlined text-2xl">arrow_forward</span>
-                    </button>
-                </div>
             </div>
         </div>
         
