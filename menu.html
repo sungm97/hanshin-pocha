@@ -1,15 +1,33 @@
 <!DOCTYPE html>
-<html lang="en" class="dark scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu - Hanshin Pocha</title>
-    
+    <title>Menu — Hanshin Pocha | Korean Restaurant & Bar in Arlington Heights</title>
+    <meta name="description" content="The full Hanshin Pocha menu — Korean fried chicken, spicy braised pork ribs, bo-ssam, soju, beer, and late-night specials. Arlington Heights, IL.">
+    <link rel="canonical" href="https://hanshinpocha.com/menu.html">
+
+    <!-- Open Graph / social previews -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Menu — Hanshin Pocha">
+    <meta property="og:description" content="The full Hanshin Pocha menu — Korean fried chicken, bo-ssam, soju, beer, and more.">
+    <meta property="og:url" content="https://hanshinpocha.com/menu.html">
+    <meta property="og:image" content="images/ribs-1.jpeg">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Menu — Hanshin Pocha">
+    <meta name="twitter:description" content="The full Hanshin Pocha menu — Korean fried chicken, bo-ssam, soju, beer, and more.">
+    <meta name="twitter:image" content="images/ribs-1.jpeg">
+    <meta name="theme-color" content="#171515">
+
+    <!-- Favicon (inline SVG; no asset file required) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23473636'/%3E%3Ctext x='16' y='22' font-family='serif' font-size='18' font-weight='700' text-anchor='middle' fill='%23ecc189'%3EH%3C/text%3E%3C/svg%3E">
+
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Noto+Sans+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
     
     <script id="tailwind-config">
@@ -42,7 +60,9 @@
                         "headline": ["Montserrat", "sans-serif"],
                         "body": ["Inter", "sans-serif"],
                         "label": ["Montserrat", "sans-serif"],
-                        "korean": ["'Euljiro'", "sans-serif"]
+                        "korean": ["'Euljiro'", "sans-serif"],
+                        "korean-body": ["'Noto Sans KR'", "sans-serif"],
+                        "brand": ["'RecipeKorea'", "serif"]
                     }
                 },
             },
@@ -85,20 +105,20 @@
             <a href="index.html" class="text-2xl font-korean tracking-wider text-[#ecc189]">한신포차</a>
             
             <div class="hidden md:flex items-center space-x-8">
-                <a href="index.html" class="text-[#eae1da]/80 font-headline tracking-wide text-sm font-medium hover:text-[#ecc189] transition-colors duration-300">Our Story</a>
-                <a href="#" class="text-[#ecc189] font-headline tracking-wide text-sm font-semibold border-b border-[#ecc189] pb-0.5 transition-transform hover:scale-105">Menu</a>
-                <a href="index.html#location" class="text-[#eae1da]/80 font-headline tracking-wide text-sm font-medium hover:text-[#ecc189] transition-colors duration-300">Locations</a>
+                <a href="index.html#story" class="text-[#eae1da]/80 font-headline tracking-wide text-sm font-medium hover:text-[#ecc189] transition-colors duration-300">Our Story</a>
+                <a href="#" aria-current="page" class="text-[#ecc189] font-headline tracking-wide text-sm font-semibold border-b border-[#ecc189] pb-0.5 transition-transform hover:scale-105">Menu</a>
+                <a href="index.html#location" class="text-[#eae1da]/80 font-headline tracking-wide text-sm font-medium hover:text-[#ecc189] transition-colors duration-300">Location</a>
             </div>
 
             <button id="mobile-menu-btn" class="md:hidden text-primary p-2">
                 <span class="material-symbols-outlined text-3xl">menu</span>
             </button>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-0 w-full bg-background border-b border-outline-variant/30 shadow-2xl z-50">
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-background border-b border-outline-variant/30 shadow-2xl z-50">
             <div class="flex flex-col px-6 py-4 space-y-4">
-                <a href="#" class="text-[#ecc189] font-headline text-lg">Our Story</a>
-                <a href="menu.html" class="text-[#eae1da] font-headline text-lg">Menu</a>
-                <a href="#location" class="text-[#eae1da] font-headline text-lg">Locations</a>
+                <a href="index.html#story" class="text-[#eae1da] font-headline text-lg">Our Story</a>
+                <a href="#" aria-current="page" class="text-[#ecc189] font-headline text-lg">Menu</a>
+                <a href="index.html#location" class="text-[#eae1da] font-headline text-lg">Location</a>
             </div>
         </div>
 
@@ -130,13 +150,13 @@
                     <div class="flex justify-between items-start mb-2">
                         <h3 class="font-headline text-lg font-medium text-on-surface leading-tight">
                             Spicy Pork Ribs <br>
-                            <span class="text-sm font-light text-on-surface-variant font-body mt-1 block">매운쪽갈비</span>
+                            <span class="text-sm font-light text-on-surface-variant font-korean-body mt-1 block">매운쪽갈비</span>
                         </h3>
                         <span class="font-body text-primary font-medium">$24.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant mb-3">Stir-fried pork ribs coated sweet and spicy sauce</p>
                     <div class="flex gap-2 mt-auto pt-3">
-                        <span class="text-[10px] uppercase tracking-wider border border-[#ef4444] text-[#ef4444] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
+                        <span class="text-[10px] uppercase tracking-wider border border-[#f87171] text-[#f87171] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
                     </div>
                 </div>
                 <div class="flex flex-col group">
@@ -146,11 +166,11 @@
                     <div class="flex justify-between items-start mb-2">
                         <h3 class="font-headline text-lg font-medium text-on-surface leading-tight">
                             Spicy Chicken with Cheese<br>
-                            <span class="text-sm font-light text-on-surface-variant font-body mt-1 block">치즈 불닭</span>
+                            <span class="text-sm font-light text-on-surface-variant font-korean-body mt-1 block">치즈 불닭</span>
                         </h3>
                         <span class="font-body text-primary font-medium">$22.99</span>
                     </div>
-                    <p class="font-body font-light text-sm text-on-surface-variant mb-3">Cold steamed pig's feet with cucumber, bell pepper, and lettuce</p>
+                    <p class="font-body font-light text-sm text-on-surface-variant mb-3">Chicken in spicy sauce with rice cakes and onions topped with melted mozzarella cheese</p>
                 </div>
                 <div class="flex flex-col group">
                     <div class="relative w-full aspect-[4/3] mb-5 overflow-hidden rounded-sm bg-surface-container-low">
@@ -159,7 +179,7 @@
                     <div class="flex justify-between items-start mb-2">
                         <h3 class="font-headline text-lg font-medium text-on-surface leading-tight">
                              Chicken Gizzard with Garlic<br>
-                            <span class="text-sm font-light text-on-surface-variant font-body mt-1 block">마늘똥집</span>
+                            <span class="text-sm font-light text-on-surface-variant font-korean-body mt-1 block">마늘똥집</span>
                         </h3>
                         <span class="font-body text-primary font-medium">$22.99</span>
                     </div>
@@ -170,97 +190,97 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-10 max-w-5xl mx-auto">
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Intestine with Garlic <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">마늘 곱창</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Intestine with Garlic <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">마늘 곱창</span></h4>
                         <span class="font-body text-primary font-medium">$22.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Beef intestine stir fried with jalapenos, red pepper, and garlic</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Pork Belly and Kimchi with Tofu <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">삼겹살 두부김치</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Pork Belly and Kimchi with Tofu <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">삼겹살 두부김치</span></h4>
                         <span class="font-body text-primary font-medium">$39.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Stir-fried pork belly and kimchi with bacon, tofu, and vegetables</p>
                     <div class="flex gap-2 mt-auto pt-3">
-                        <span class="text-[10px] uppercase tracking-wider border border-[#ef4444] text-[#ef4444] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
+                        <span class="text-[10px] uppercase tracking-wider border border-[#f87171] text-[#f87171] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
                     </div>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Bo-Ssam <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">보쌈</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Bo-Ssam <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">보쌈</span></h4>
                         <span class="font-body text-primary font-medium">$36.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Steamed sliced pork belly served with white kimchi and radish kimchi with oysters (Add Oyster +$8.99)</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Spicy Braised Pork Ribs <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">매운등갈비찜</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Spicy Braised Pork Ribs <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">매운등갈비찜</span></h4>
                         <span class="font-body text-primary font-medium">L:$45.99 / S:$32.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Spicy braised pork ribs that are slow-cooked in a spicy sauce.</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Steamed Squid with Oysters <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">오징어굴보쌈</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Steamed Squid with Oysters <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">오징어굴보쌈</span></h4>
                         <span class="font-body text-primary font-medium">$39.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Steamed squid and oysters served with Bo-ssam (Add Oyster +$8.99)</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Stir Fried Intestine <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">곱창 순대볶음</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Stir Fried Intestine <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">곱창 순대볶음</span></h4>
                         <span class="font-body text-primary font-medium">$38.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Stir-fried mixed intestine, vegetables and sesame leaves served with Korean blood sausage</p>
                     <div class="flex gap-2 mt-auto pt-3">
-                        <span class="text-[10px] uppercase tracking-wider border border-[#ef4444] text-[#ef4444] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
+                        <span class="text-[10px] uppercase tracking-wider border border-[#f87171] text-[#f87171] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
                     </div>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Pig's Feet with Vegetables <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">족발냉채</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Pig's Feet with Vegetables <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">족발냉채</span></h4>
                         <span class="font-body text-primary font-medium">$32.99</span>
                     </div>
-                    <p class="font-body font-light text-sm text-on-surface-variant">Chicken in spicy sauce with rice cakes and onions topped with melted mozzarella cheese</p>
+                    <p class="font-body font-light text-sm text-on-surface-variant">Cold steamed pig's feet with cucumber, bell pepper, and lettuce</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Rolled Omelet <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">계란말이</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Rolled Omelet <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">계란말이</span></h4>
                         <span class="font-body text-primary font-medium">$26.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Rolled omelet stuffed with vegetables and cheese</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Steamed Pig's Feet <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">족발</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Steamed Pig's Feet <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">족발</span></h4>
                         <span class="font-body text-primary font-medium">$26.99</span>
                     </div>
-                    <p class="font-body font-light text-sm text-on-surface-variant">Served with ssamjang</p>
+                    <p class="font-body font-light text-sm text-on-surface-variant">Served with ssamjang sauce</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Steamed Egg <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">계란찜</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Steamed Egg <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">계란찜</span></h4>
                         <span class="font-body text-primary font-medium">$14.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Steamed Egg</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Mixed Fish Cake Soup <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">어묵탕</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Mixed Fish Cake Soup <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">어묵탕</span></h4>
                         <span class="font-body text-primary font-medium">$18.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Mixed fish cake soup</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Pork Belly with Mung Bean Sprout <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">숙주 삼겹살</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Pork Belly with Mung Bean Sprout <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">숙주 삼겹살</span></h4>
                         <span class="font-body text-primary font-medium">$28.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Sliced pork belly stir-fried with mung bean sprout</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Beef Brisket with Mung Bean Sprout <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">숙주 차돌박이</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Beef Brisket with Mung Bean Sprout <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">숙주 차돌박이</span></h4>
                         <span class="font-body text-primary font-medium">$28.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Sliced beef brisket stir-fried with mung bean sprout</p>
@@ -279,13 +299,13 @@
                     <div class="flex justify-between items-start mb-2">
                         <h3 class="font-headline text-lg font-medium text-on-surface leading-tight">
                             Spicy Rice Cake <br>
-                            <span class="text-sm font-light text-on-surface-variant font-body mt-1 block">떡볶이</span>
+                            <span class="text-sm font-light text-on-surface-variant font-korean-body mt-1 block">떡볶이</span>
                         </h3>
                         <span class="font-body text-primary font-medium">$15.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant mb-3">Fried pancake with kimchi, squid, and vegetables</p>
                     <div class="flex gap-2 mt-auto pt-3">
-                        <span class="text-[10px] uppercase tracking-wider border border-[#ef4444] text-[#ef4444] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
+                        <span class="text-[10px] uppercase tracking-wider border border-[#f87171] text-[#f87171] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
                     </div>
                 </div>
 
@@ -296,7 +316,7 @@
                     <div class="flex justify-between items-start mb-2">
                         <h3 class="font-headline text-lg font-medium text-on-surface leading-tight">
                             Brisket Salad <br>
-                            <span class="text-sm font-light text-on-surface-variant font-body mt-1 block">차돌 샐러드</span>
+                            <span class="text-sm font-light text-on-surface-variant font-korean-body mt-1 block">차돌 샐러드</span>
                         </h3>
                         <span class="font-body text-primary font-medium">$29.99</span>
                     </div>
@@ -310,7 +330,7 @@
                     <div class="flex justify-between items-start mb-2">
                         <h3 class="font-headline text-lg font-medium text-on-surface leading-tight">
                             Seafood & Green Onion Pancake <br>
-                            <span class="text-sm font-light text-on-surface-variant font-body mt-1 block">해물파전</span>
+                            <span class="text-sm font-light text-on-surface-variant font-korean-body mt-1 block">해물파전</span>
                         </h3>
                         <span class="font-body text-primary font-medium">$25.99</span>
                     </div>
@@ -321,110 +341,110 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-10 max-w-5xl mx-auto">
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Spice Rice Cake with Cheese <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">치즈떡볶이</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Spice Rice Cake with Cheese <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">치즈떡볶이</span></h4>
                         <span class="font-body text-primary font-medium">$18.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Rice cakes in a spicy sauce with fish cakes, onions, and cabbages with melted cheese on top</p>
                     <div class="flex gap-2 mt-auto pt-3">
-                        <span class="text-[10px] uppercase tracking-wider border border-[#ef4444] text-[#ef4444] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
+                        <span class="text-[10px] uppercase tracking-wider border border-[#f87171] text-[#f87171] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
                     </div>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Rosé Spice Rice Cake <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">로제떡볶이</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Rosé Spice Rice Cake <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">로제떡볶이</span></h4>
                         <span class="font-body text-primary font-medium">$18.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Rice cakes in a spicy sauce with fish cakes, onions, and cabbages with cream and milk</p>
                     <div class="flex gap-2 mt-auto pt-3">
-                        <span class="text-[10px] uppercase tracking-wider border border-[#ef4444] text-[#ef4444] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
+                        <span class="text-[10px] uppercase tracking-wider border border-[#f87171] text-[#f87171] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
                     </div>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Kimchi Pancake <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">김치전</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Kimchi Pancake <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">김치전</span></h4>
                         <span class="font-body text-primary font-medium">$16.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Fried pancake with kimchi, squid, and vegetables</p>
                     <div class="flex gap-2 mt-auto pt-3">
-                        <span class="text-[10px] uppercase tracking-wider border border-[#ef4444] text-[#ef4444] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
+                        <span class="text-[10px] uppercase tracking-wider border border-[#f87171] text-[#f87171] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
                     </div>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Chive Pancake <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">부추전</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Chive Pancake <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">부추전</span></h4>
                         <span class="font-body text-primary font-medium">$19.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Fried pancake with kimchi, squid, and vegetables</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Radish Pancake <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">무전</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Radish Pancake <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">무전</span></h4>
                         <span class="font-body text-primary font-medium">$16.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Deep fried meat dumplings</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Deep Fried Dumplings (10 pcs) <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">튀김만두</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Deep Fried Dumplings (10 pcs) <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">튀김만두</span></h4>
                         <span class="font-body text-primary font-medium">$12.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Deep fried meat dumplings</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Boiled Dumpling <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">물만두</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Boiled Dumpling <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">물만두</span></h4>
                         <span class="font-body text-primary font-medium">$9.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Vegetable dumplings boiled in water</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Ramen <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">라면</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Ramen <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">라면</span></h4>
                         <span class="font-body text-primary font-medium">$9.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Shin ramen with egg and vegetables</p>
                     <div class="flex gap-2 mt-auto pt-3">
-                        <span class="text-[10px] uppercase tracking-wider border border-[#ef4444] text-[#ef4444] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
+                        <span class="text-[10px] uppercase tracking-wider border border-[#f87171] text-[#f87171] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
                     </div>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Korean Blood Sausage <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">순대</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Korean Blood Sausage <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">순대</span></h4>
                         <span class="font-body text-primary font-medium">$12.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Korean sausage made with intestines stuffed with glass noodles</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Sweet Potato Fries <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">고구마튀김</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Sweet Potato Fries <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">고구마튀김</span></h4>
                         <span class="font-body text-primary font-medium">$9.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Sliced and sweet potato fries</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">French Fries <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">감자튀김</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">French Fries <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">감자튀김</span></h4>
                         <span class="font-body text-primary font-medium">$9.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Potato fries</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Corn Cheese <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">콘치즈</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Corn Cheese <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">콘치즈</span></h4>
                         <span class="font-body text-primary font-medium">$9.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Corn mixed with melted mozzarella cheese, mayo, and imitation crab meat</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Bundaegi (Silkworm Pupae) <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">번데기</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Bundaegi (Silkworm Pupae) <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">번데기</span></h4>
                         <span class="font-body text-primary font-medium">$9.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Boiled silkworm pupae</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Dried Snacks <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">마른안주</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Dried Snacks <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">마른안주</span></h4>
                         <span class="font-body text-primary font-medium">$14.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Dried snacks</p>
@@ -443,13 +463,13 @@
                     <div class="flex justify-between items-start mb-2">
                         <h3 class="font-headline text-lg font-medium text-on-surface leading-tight">
                             Soft Tofu Stew <br>
-                            <span class="text-sm font-light text-on-surface-variant font-body mt-1 block">순두부</span>
+                            <span class="text-sm font-light text-on-surface-variant font-korean-body mt-1 block">순두부</span>
                         </h3>
                         <span class="font-body text-primary font-medium">$15.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant mb-3">Spicy soft tofu stew with seafood and vegetables</p>
                     <div class="flex gap-2 mt-auto pt-3">
-                        <span class="text-[10px] uppercase tracking-wider border border-[#ef4444] text-[#ef4444] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
+                        <span class="text-[10px] uppercase tracking-wider border border-[#f87171] text-[#f87171] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
                     </div>
                 </div>
 
@@ -460,7 +480,7 @@
                     <div class="flex justify-between items-start mb-2">
                         <h3 class="font-headline text-lg font-medium text-on-surface leading-tight">
                             Bulgogi<br>
-                            <span class="text-sm font-light text-on-surface-variant font-body mt-1 block">불고기</span>
+                            <span class="text-sm font-light text-on-surface-variant font-korean-body mt-1 block">불고기</span>
                         </h3>
                         <span class="font-body text-primary font-medium">$21.99</span>
                     </div>
@@ -474,7 +494,7 @@
                     <div class="flex justify-between items-start mb-2">
                         <h3 class="font-headline text-lg font-medium text-on-surface leading-tight">
                         Seafood Knife-cut Noodles <br>
-                            <span class="text-sm font-light text-on-surface-variant font-body mt-1 block">해물칼국수</span>
+                            <span class="text-sm font-light text-on-surface-variant font-korean-body mt-1 block">해물칼국수</span>
                         </h3>
                         <span class="font-body text-primary font-medium">$16.99</span>
                     </div>
@@ -485,106 +505,106 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-10 max-w-5xl mx-auto">
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Spicy Seafood Knife Noodles <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">매운칼국수</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Spicy Seafood Knife Noodles <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">매운칼국수</span></h4>
                         <span class="font-body text-primary font-medium">$18.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Knife noodles with vegetables and seafood in a spicy broth</p>
                     <div class="flex gap-2 mt-auto pt-3">
-                        <span class="text-[10px] uppercase tracking-wider border border-[#ef4444] text-[#ef4444] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
+                        <span class="text-[10px] uppercase tracking-wider border border-[#f87171] text-[#f87171] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
                     </div>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Korean Army Stew in Iron Pot <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">뚝부대찌개</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Korean Army Stew in Iron Pot <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">뚝부대찌개</span></h4>
                         <span class="font-body text-primary font-medium">$17.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Spicy stew with ramen, spam, sausage, kimchi, and vegetables</p>
                     <div class="flex gap-2 mt-auto pt-3">
-                        <span class="text-[10px] uppercase tracking-wider border border-[#ef4444] text-[#ef4444] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
+                        <span class="text-[10px] uppercase tracking-wider border border-[#f87171] text-[#f87171] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
                     </div>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Braised Saury and Kimchi <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">꽁치김치찜</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Braised Saury and Kimchi <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">꽁치김치찜</span></h4>
                         <span class="font-body text-primary font-medium">$16.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Braised saury with kimchi</p>
                     <div class="flex gap-2 mt-auto pt-3">
-                        <span class="text-[10px] uppercase tracking-wider border border-[#ef4444] text-[#ef4444] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
+                        <span class="text-[10px] uppercase tracking-wider border border-[#f87171] text-[#f87171] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
                     </div>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Braised Pork and Kimchi <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">돼지김치찜</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Braised Pork and Kimchi <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">돼지김치찜</span></h4>
                         <span class="font-body text-primary font-medium">$17.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Braised pork with kimchi</p>
                     <div class="flex gap-2 mt-auto pt-3">
-                        <span class="text-[10px] uppercase tracking-wider border border-[#ef4444] text-[#ef4444] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
+                        <span class="text-[10px] uppercase tracking-wider border border-[#f87171] text-[#f87171] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
                     </div>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Banquet Noodles <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">잔치국수</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Banquet Noodles <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">잔치국수</span></h4>
                         <span class="font-body text-primary font-medium">$14.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Noodles with vegetables and seafood in an anchovy broth</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Spicy Fish Roe Soup <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">알탕</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Spicy Fish Roe Soup <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">알탕</span></h4>
                         <span class="font-body text-primary font-medium">$16.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant"></p>
                     <div class="flex gap-2 mt-auto pt-3">
-                        <span class="text-[10px] uppercase tracking-wider border border-[#ef4444] text-[#ef4444] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
+                        <span class="text-[10px] uppercase tracking-wider border border-[#f87171] text-[#f87171] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
                     </div>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Spicy Intestine and Roe Soup <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">곤이알탕</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Spicy Intestine and Roe Soup <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">곤이알탕</span></h4>
                         <span class="font-body text-primary font-medium">$21.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Spicy stew with fish intestine and roe and vegetables</p>
                     <div class="flex gap-2 mt-auto pt-3">
-                        <span class="text-[10px] uppercase tracking-wider border border-[#ef4444] text-[#ef4444] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
+                        <span class="text-[10px] uppercase tracking-wider border border-[#f87171] text-[#f87171] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
                     </div>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Spicy Grilled Pork <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">제육구이</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Spicy Grilled Pork <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">제육구이</span></h4>
                         <span class="font-body text-primary font-medium">$20.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Pork in a spicy marinade with vegetables</p>
                     <div class="flex gap-2 mt-auto pt-3">
-                        <span class="text-[10px] uppercase tracking-wider border border-[#ef4444] text-[#ef4444] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
+                        <span class="text-[10px] uppercase tracking-wider border border-[#f87171] text-[#f87171] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
                     </div>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Cold Kimchi Noodles <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">김치말이국수(Full)</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Cold Kimchi Noodles <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">김치말이국수(Full)</span></h4>
                         <span class="font-body text-primary font-medium">$15.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Noodles with vegetables and sliced kimchi in cold broth</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Kimchi Fried Rice <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">김치볶음밥</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Kimchi Fried Rice <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">김치볶음밥</span></h4>
                         <span class="font-body text-primary font-medium">$18.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Fried rice with spam and kimchi topped with fried eggs</p>
                     <div class="flex gap-2 mt-auto pt-3">
-                        <span class="text-[10px] uppercase tracking-wider border border-[#ef4444] text-[#ef4444] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
+                        <span class="text-[10px] uppercase tracking-wider border border-[#f87171] text-[#f87171] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
                     </div>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Squid with Spicy Sauce <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">오징어볶음</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Squid with Spicy Sauce <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">오징어볶음</span></h4>
                         <span class="font-body text-primary font-medium">$19.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Squid with vegetables in a spicy sauce</p>
                     <div class="flex gap-2 mt-auto pt-3">
-                        <span class="text-[10px] uppercase tracking-wider border border-[#ef4444] text-[#ef4444] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
+                        <span class="text-[10px] uppercase tracking-wider border border-[#f87171] text-[#f87171] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
                     </div>
                 </div>
             </div>
@@ -601,7 +621,7 @@
                     <div class="flex justify-between items-start mb-2">
                         <h3 class="font-headline text-lg font-medium text-on-surface leading-tight">
                             Sliced Beef Brisket (1 serving) <br>
-                            <span class="text-sm font-light text-on-surface-variant font-body mt-1 block">차돌박이 (1인분)</span>
+                            <span class="text-sm font-light text-on-surface-variant font-korean-body mt-1 block">차돌박이 (1인분)</span>
                         </h3>
                         <span class="font-body text-primary font-medium">$26.99</span>
                     </div>
@@ -615,13 +635,13 @@
                     <div class="flex justify-between items-start mb-2">
                         <h3 class="font-headline text-lg font-medium text-on-surface leading-tight">
                             Korean Army Hotpot <br>
-                            <span class="text-sm font-light text-on-surface-variant font-body mt-1 block">부대전골</span>
+                            <span class="text-sm font-light text-on-surface-variant font-korean-body mt-1 block">부대전골</span>
                         </h3>
                         <span class="font-body text-primary font-medium">$38.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant mb-3">Korean army stew served in a hotpot</p>
                     <div class="flex gap-2 mt-auto pt-3">
-                        <span class="text-[10px] uppercase tracking-wider border border-[#ef4444] text-[#ef4444] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
+                        <span class="text-[10px] uppercase tracking-wider border border-[#f87171] text-[#f87171] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
                     </div>
                 </div>
 
@@ -632,13 +652,13 @@
                     <div class="flex justify-between items-start mb-2">
                         <h3 class="font-headline text-lg font-medium text-on-surface leading-tight">
                             Broiled Spicy Chicken and Vegetables <br>
-                            <span class="text-sm font-light text-on-surface-variant font-body mt-1 block">춘천닭갈비</span>
+                            <span class="text-sm font-light text-on-surface-variant font-korean-body mt-1 block">춘천닭갈비</span>
                         </h3>
                         <span class="font-body text-primary font-medium">$37.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant mb-3">Broiled spicy chicken with cabbage, onions, sweet potatoes, and rice cakes. (Add: Fried Rice +$5.99)</p>
                     <div class="flex gap-2 mt-auto pt-3">
-                        <span class="text-[10px] uppercase tracking-wider border border-[#ef4444] text-[#ef4444] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
+                        <span class="text-[10px] uppercase tracking-wider border border-[#f87171] text-[#f87171] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
                     </div>
                 </div>
             </div>
@@ -646,125 +666,125 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-10 max-w-5xl mx-auto">
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">삼겹살 (1인분) <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">삼겹살 (1인분) </span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">삼겹살 (1인분) <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">삼겹살 (1인분) </span></h4>
                         <span class="font-body text-primary font-medium">24.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Sliced pork belly, served with sesame oil sauce and green onion salad. (Needs a minimum order of 2 orders)</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Broiled Bulgogi <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">불고기 석쇠구이</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Broiled Bulgogi <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">불고기 석쇠구이</span></h4>
                         <span class="font-body text-primary font-medium">$25.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Bulgogi with mushrooms served on a grilling rack</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Broiled Spicy Pork <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">제육 석쇠구이</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Broiled Spicy Pork <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">제육 석쇠구이</span></h4>
                         <span class="font-body text-primary font-medium">$24.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Spicy pork and onions served on a grilling rack</p>
                     <div class="flex gap-2 mt-auto pt-3">
-                        <span class="text-[10px] uppercase tracking-wider border border-[#ef4444] text-[#ef4444] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
+                        <span class="text-[10px] uppercase tracking-wider border border-[#f87171] text-[#f87171] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
                     </div>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Broiled Baby Octopus <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">쭈꾸미 석쇠구이</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Broiled Baby Octopus <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">쭈꾸미 석쇠구이</span></h4>
                         <span class="font-body text-primary font-medium">$23.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Spicy baby octopus and onions served on a grilling rack</p>
                     <div class="flex gap-2 mt-auto pt-3">
-                        <span class="text-[10px] uppercase tracking-wider border border-[#ef4444] text-[#ef4444] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
+                        <span class="text-[10px] uppercase tracking-wider border border-[#f87171] text-[#f87171] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
                     </div>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Stir-fried Baby Octopus & Pork Belly <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">쭈꾸미 삼겹살</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Stir-fried Baby Octopus & Pork Belly <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">쭈꾸미 삼겹살</span></h4>
                         <span class="font-body text-primary font-medium">$38.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Stir-fried baby octopus and pork belly in a spicy sauce</p>
                     <div class="flex gap-2 mt-auto pt-3">
-                        <span class="text-[10px] uppercase tracking-wider border border-[#ef4444] text-[#ef4444] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
+                        <span class="text-[10px] uppercase tracking-wider border border-[#f87171] text-[#f87171] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
                     </div>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Stir-fried Baby Octopus & Beef Brisket <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">쭈꾸미 차돌베기</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Stir-fried Baby Octopus & Beef Brisket <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">쭈꾸미 차돌베기</span></h4>
                         <span class="font-body text-primary font-medium">$40.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Stir-fried baby octopus with brisket</p>
                     <div class="flex gap-2 mt-auto pt-3">
-                        <span class="text-[10px] uppercase tracking-wider border border-[#ef4444] text-[#ef4444] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
+                        <span class="text-[10px] uppercase tracking-wider border border-[#f87171] text-[#f87171] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
                     </div>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Beef Intestine Hotpot <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">곱창전골</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Beef Intestine Hotpot <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">곱창전골</span></h4>
                         <span class="font-body text-primary font-medium">$38.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Beef intestine soup with vegetables served in a hotpot</p>
                     <div class="flex gap-2 mt-auto pt-3">
-                        <span class="text-[10px] uppercase tracking-wider border border-[#ef4444] text-[#ef4444] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
+                        <span class="text-[10px] uppercase tracking-wider border border-[#f87171] text-[#f87171] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
                     </div>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Spicy Fish Intestine and Roe Hotpot <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">곤이알탕 전골</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Spicy Fish Intestine and Roe Hotpot <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">곤이알탕 전골</span></h4>
                         <span class="font-body text-primary font-medium">$42.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Spicy stew with fish intestine and roe and vegetables served in a hotpot</p>
                     <div class="flex gap-2 mt-auto pt-3">
-                        <span class="text-[10px] uppercase tracking-wider border border-[#ef4444] text-[#ef4444] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
+                        <span class="text-[10px] uppercase tracking-wider border border-[#f87171] text-[#f87171] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
                     </div>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Braised Saury and Kimchi Hotpot <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">꽁치 김치찜 전골</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Braised Saury and Kimchi Hotpot <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">꽁치 김치찜 전골</span></h4>
                         <span class="font-body text-primary font-medium">$38.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Braised saury stew with kimchi served in a hotpot</p>
                     <div class="flex gap-2 mt-auto pt-3">
-                        <span class="text-[10px] uppercase tracking-wider border border-[#ef4444] text-[#ef4444] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
+                        <span class="text-[10px] uppercase tracking-wider border border-[#f87171] text-[#f87171] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
                     </div>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Braised Pork and Kimchi Hotpot <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">돼지 김치찜 전골</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Braised Pork and Kimchi Hotpot <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">돼지 김치찜 전골</span></h4>
                         <span class="font-body text-primary font-medium">$38.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Braised pork and kimchi stew served in a hotpot</p>
                     <div class="flex gap-2 mt-auto pt-3">
-                        <span class="text-[10px] uppercase tracking-wider border border-[#ef4444] text-[#ef4444] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
+                        <span class="text-[10px] uppercase tracking-wider border border-[#f87171] text-[#f87171] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
                     </div>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Spicy Seafood Soup <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">짬뽕홍합탕</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Spicy Seafood Soup <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">짬뽕홍합탕</span></h4>
                         <span class="font-body text-primary font-medium">$42.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Spicy soup with vegetables and seafood</p>
                     <div class="flex gap-2 mt-auto pt-3">
-                        <span class="text-[10px] uppercase tracking-wider border border-[#ef4444] text-[#ef4444] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
+                        <span class="text-[10px] uppercase tracking-wider border border-[#f87171] text-[#f87171] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
                     </div>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Scorched Rice with Seafood Soup <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">해물누룽지탕</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Scorched Rice with Seafood Soup <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">해물누룽지탕</span></h4>
                         <span class="font-body text-primary font-medium">$32.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Seafood soup with vegetables and scorched rice</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Oyster Mushroom Soup <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">버섯굴탕</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Oyster Mushroom Soup <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">버섯굴탕</span></h4>
                         <span class="font-body text-primary font-medium">$23.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Soup with oyster and mushroom</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Bulgogi Mushroom Soup <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">불고기탕</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Bulgogi Mushroom Soup <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">불고기탕</span></h4>
                         <span class="font-body text-primary font-medium">$23.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Mushroom and Bulgogi</p>
@@ -783,7 +803,7 @@
                     <div class="flex justify-between items-start mb-2">
                         <h3 class="font-headline text-lg font-medium text-on-surface leading-tight">
                             Seasonal Oysters [Seasonal] <br>
-                            <span class="text-sm font-light text-on-surface-variant font-body mt-1 block">석화</span>
+                            <span class="text-sm font-light text-on-surface-variant font-korean-body mt-1 block">석화</span>
                         </h3>
                         <span class="font-body text-primary font-medium">$27.99</span>
                     </div>
@@ -797,7 +817,7 @@
                     <div class="flex justify-between items-start mb-2">
                         <h3 class="font-headline text-lg font-medium text-on-surface leading-tight">
                             Deep Fried Chicken <br>
-                            <span class="text-sm font-light text-on-surface-variant font-body mt-1 block">후라이드 치킨</span>
+                            <span class="text-sm font-light text-on-surface-variant font-korean-body mt-1 block">후라이드 치킨</span>
                         </h3>
                         <span class="font-body text-primary font-medium">$25.99</span>
                     </div>
@@ -811,13 +831,13 @@
                     <div class="flex justify-between items-start mb-2">
                         <h3 class="font-headline text-lg font-medium text-on-surface leading-tight">
                             Spicy Snail with Vegetables & Fried Dumplings <br>
-                            <span class="text-sm font-light text-on-surface-variant font-body mt-1 block">골뱅이무침 튀김만두 or 소면</span>
+                            <span class="text-sm font-light text-on-surface-variant font-korean-body mt-1 block">골뱅이무침 튀김만두 or 소면</span>
                         </h3>
                         <span class="font-body text-primary font-medium">$32.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant mb-3">Spicy snail with vegetables served with fried dumplings or noodles</p>
                     <div class="flex gap-2 mt-auto pt-3">
-                        <span class="text-[10px] uppercase tracking-wider border border-[#ef4444] text-[#ef4444] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
+                        <span class="text-[10px] uppercase tracking-wider border border-[#f87171] text-[#f87171] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
                     </div>
                 </div>
             </div>
@@ -825,90 +845,90 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-10 max-w-5xl mx-auto">
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Spicy Grilled Squid with Banquet Noodles <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">오징어 소면</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Spicy Grilled Squid with Banquet Noodles <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">오징어 소면</span></h4>
                         <span class="font-body text-primary font-medium">$26.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Spicy grilled squid with vegetables served with cold banquet noodles</p>
                     <div class="flex gap-2 mt-auto pt-3">
-                        <span class="text-[10px] uppercase tracking-wider border border-[#ef4444] text-[#ef4444] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
+                        <span class="text-[10px] uppercase tracking-wider border border-[#f87171] text-[#f87171] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
                     </div>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Sea Squirts <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">멍게</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Sea Squirts <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">멍게</span></h4>
                         <span class="font-body text-primary font-medium">$16.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Raw sea squirt served with sweet and sour spicy sauce</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Oysters <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">생굴</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Oysters <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">생굴</span></h4>
                         <span class="font-body text-primary font-medium">$16.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Raw oysters served with sweet, sour and spicy sauce</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Raw Hanchi <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">한치회</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Raw Hanchi <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">한치회</span></h4>
                         <span class="font-body text-primary font-medium">$16.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Raw Hanchi</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Shellfish Soup <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">조개탕</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Shellfish Soup <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">조개탕</span></h4>
                         <span class="font-body text-primary font-medium">$17.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Soup with vegetables and clam</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Mussles Soup <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">홍합탕</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Mussles Soup <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">홍합탕</span></h4>
                         <span class="font-body text-primary font-medium">$17.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Soup with vegetables and mussels</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Steamed Squid <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">오징어 숙회</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Steamed Squid <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">오징어 숙회</span></h4>
                         <span class="font-body text-primary font-medium">$17.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Steamed squid served with sweet and sour spicy sauce</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Deep Fried Seaweed Roll <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">김말이 튀김</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Deep Fried Seaweed Roll <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">김말이 튀김</span></h4>
                         <span class="font-body text-primary font-medium">$14.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Deep fried seaweed rolls stuffed with glass noodles</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Deep Fried Chicken Wings <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">닭날개튀김</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Deep Fried Chicken Wings <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">닭날개튀김</span></h4>
                         <span class="font-body text-primary font-medium">$23.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Deep fried chicken wings</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Spicy Fried Chicken <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">매운양념치킨</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Spicy Fried Chicken <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">매운양념치킨</span></h4>
                         <span class="font-body text-primary font-medium">$19.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Spicy fried boneless chicken</p>
                     <div class="flex gap-2 mt-auto pt-3">
-                        <span class="text-[10px] uppercase tracking-wider border border-[#ef4444] text-[#ef4444] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
+                        <span class="text-[10px] uppercase tracking-wider border border-[#f87171] text-[#f87171] px-1.5 py-0.5 rounded-sm w-max font-semibold">Spicy</span>
                     </div>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Deep Fried Squid <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">오징어 튀김</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Deep Fried Squid <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">오징어 튀김</span></h4>
                         <span class="font-body text-primary font-medium">$18.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Deep fried squid</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Pork Katsu <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">돈까스안주</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Pork Katsu <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">돈까스안주</span></h4>
                         <span class="font-body text-primary font-medium">$18.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Deep fried pork cutlet served with cabbage salad and katsu sauce</p>
@@ -1027,7 +1047,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-10 max-w-4xl mx-auto">
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Soju <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">참이슬/처음처럼/새로/진로이즈백</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Soju <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">참이슬/처음처럼/새로/진로이즈백</span></h4>
                         <span class="font-body text-primary font-medium">$12.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Chum Churum/Chamisul/Saero/Jinro is Back</p>
@@ -1035,70 +1055,70 @@
                 
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Flavored Soju <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">복숭아/사과/포도/딸기/리치/요거트 맛</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Flavored Soju <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">복숭아/사과/포도/딸기/리치/요거트 맛</span></h4>
                         <span class="font-body text-primary font-medium">$13.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Green Grape/Peach/Apple/Lychee/Yogurt</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface"> Soju - Hallasan <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">한라산 17/21도</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface"> Soju - Hallasan <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">한라산 17/21도</span></h4>
                         <span class="font-body text-primary font-medium">$13.99 / $15.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Hallasan Soju 17/21</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Korean Blackberry Wine <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">복분자</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Korean Blackberry Wine <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">복분자</span></h4>
                         <span class="font-body text-primary font-medium">$14.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Korean black raspberry wine, sweet and rich.</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Korean Rice Wine <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">막걸리 (국순당)</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Korean Rice Wine <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">막걸리 (국순당)</span></h4>
                         <span class="font-body text-primary font-medium">$13.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Traditional Korean rice wine, smooth and flavorful.</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Hwayo 17/23 <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">화요 17/23</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Hwayo 17/23 <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">화요 17/23</span></h4>
                         <span class="font-body text-primary font-medium">$24.99 / $28.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Premium soju made with traditional techniques.</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Ilpum Jinro <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">일품진로</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Ilpum Jinro <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">일품진로</span></h4>
                         <span class="font-body text-primary font-medium">$39.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Premium soju made with traditional techniques.</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Hot Sake<span class="font-body text-sm font-light text-on-surface-variant mt-1 block">핫사케</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Hot Sake<span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">핫사케</span></h4>
                         <span class="font-body text-primary font-medium">$12.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Hot sake served with a twist.</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Beer <span class="font-body text-sm font-light text-on-surface-variant mt-1 block">OB/카스/테라/클라우드/크러시/삿포로</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Beer <span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">OB/카스/테라/클라우드/크러시/삿포로</span></h4>
                         <span class="font-body text-primary font-medium">$9.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Crisp, refreshing Korean pale lager.</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Draft Beer Sapporo (Pitcher)<span class="font-body text-sm font-light text-on-surface-variant mt-1 block">삿포로 드래프트 (피처)</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Draft Beer Sapporo (Pitcher)<span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">삿포로 드래프트 (피처)</span></h4>
                         <span class="font-body text-primary font-medium">$17.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Crisp, refreshing Japanese lager.</p>
                 </div>
                 <div class="border-b border-outline-variant/10 pb-4">
                     <div class="flex justify-between items-baseline mb-1">
-                        <h4 class="font-headline text-lg text-on-surface">Draft Beer Sapporo (Glass)<span class="font-body text-sm font-light text-on-surface-variant mt-1 block">삿포로 드래프트 (잔)</span></h4>
+                        <h4 class="font-headline text-lg text-on-surface">Draft Beer Sapporo (Glass)<span class="font-korean-body text-sm font-light text-on-surface-variant mt-1 block">삿포로 드래프트 (잔)</span></h4>
                         <span class="font-body text-primary font-medium">$8.99</span>
                     </div>
                     <p class="font-body font-light text-sm text-on-surface-variant">Crisp, refreshing Japanese lager.</p>
@@ -1109,10 +1129,23 @@
     </main>
 
     <footer class="bg-[#171515] w-full rounded-none border-t border-outline-variant/20 relative z-10">
-        <div class="px-6 md:px-12 py-12 max-w-screen-2xl mx-auto text-center md:text-left flex flex-col md:flex-row justify-between items-center">
-            <p class="font-body text-xs font-light text-[#eae1da]/50">
-                © 2026 Hanshin Pocha. All rights reserved.
-            </p>
+        <div class="px-6 md:px-12 py-16 md:py-20 w-full max-w-screen-2xl mx-auto flex flex-col md:flex-row md:justify-between md:items-end gap-12">
+
+            <div class="md:max-w-md">
+                <h4 class="text-4xl font-korean text-[#ecc189] tracking-wider mb-6">한신포차</h4>
+                <p class="font-body text-base font-light leading-relaxed text-[#eae1da]/70">
+                    Creating modern korean pocha experience with bold flavors and vibrant atmosphere. Join us for unforgettable nights of warmth, authentic flavors, and shared stories.
+                </p>
+            </div>
+
+            <div class="flex flex-col gap-2 md:text-right">
+                <p class="font-body text-xs font-light text-[#eae1da]/50">
+                    © 2026 Hanshin Pocha. All rights reserved.
+                </p>
+                <p class="font-body text-xs font-light text-[#eae1da]/50">
+                    Created and hosted by Midwest Web Service.
+                </p>
+            </div>
         </div>
     </footer>
 
