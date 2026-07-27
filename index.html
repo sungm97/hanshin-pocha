@@ -5,76 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hanshin Pocha — Korean Restaurant & Bar in Arlington Heights</title>
     <meta name="description" content="Hanshin Pocha (한신포차) is a modern Korean pocha in Arlington Heights, IL — bold flavors, soju, and the warmth of a traditional Korean late-night bar. Open Mon–Sat.">
-    <link rel="canonical" href="https://hanshinpocha.com/">
+    <link rel="canonical" href="https://hanshinchicago.com/">
 
     <!-- Open Graph / social previews -->
     <meta property="og:type" content="restaurant.restaurant">
     <meta property="og:title" content="Hanshin Pocha — Korean Restaurant & Bar">
     <meta property="og:description" content="A modern Korean pocha in Arlington Heights, IL. Bold flavors, soju, and unforgettable nights.">
-    <meta property="og:url" content="https://hanshinpocha.com/">
-    <meta property="og:image" content="images/main-2.jpeg">
+    <meta property="og:url" content="https://hanshinchicago.com/">
+    <meta property="og:image" content="https://hanshinchicago.com/images/optimized/og-hanshin.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Hanshin Pocha in Arlington Heights">
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="ko_KR">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Hanshin Pocha — Korean Restaurant & Bar">
     <meta name="twitter:description" content="A modern Korean pocha in Arlington Heights, IL. Bold flavors, soju, and unforgettable nights.">
-    <meta name="twitter:image" content="images/main-2.jpeg">
+    <meta name="twitter:image" content="https://hanshinchicago.com/images/optimized/og-hanshin.jpg">
     <meta name="theme-color" content="#473636">
 
     <!-- Favicon (inline SVG; no asset file required) -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23473636'/%3E%3Ctext x='16' y='22' font-family='serif' font-size='18' font-weight='700' text-anchor='middle' fill='%23ecc189'%3EH%3C/text%3E%3C/svg%3E">
-
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-
+    <link rel="preload" as="image" href="images/optimized/main.webp" type="image/webp" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Noto+Sans+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-    
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "surface-bright": "#3d3833",
-                        "surface-container-low": "#1f1b17",
-                        "surface-container-high": "#2e2925",
-                        "background": "#473636",
-                        "on-surface": "#eae1da",
-                        "surface-dim": "#473636",
-                        "inverse-on-surface": "#34302b",
-                        "surface-container-lowest": "#171515",
-                        "outline-variant": "#6E4225",
-                        "surface": "#473636",
-                        "surface-container-highest": "#39342f",
-                        "primary-container": "#cfa670",
-                        "on-background": "#eae1da",
-                        "on-surface-variant": "#d2c4b6",
-                        "surface-variant": "#39342f",
-                        "surface-container": "#231f1b",
-                        "on-primary": "#6E4225",
-                        "tertiary": "#e9c28d",
-                        "primary": "#ecc189"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "md": "0.375rem",
-                        "sm": "0.125rem"
-                    },
-                    "fontFamily": {
-                        "headline": ["Montserrat", "sans-serif"],
-                        "body": ["Inter", "sans-serif"],
-                        "label": ["Montserrat", "sans-serif"],
-                        "korean": ["'Euljiro'", "sans-serif"],
-                        "korean-body": ["'Noto Sans KR'", "sans-serif"],
-                        "brand": ["'RecipeKorea'", "serif"]
-                    }
-                },
-            },
-        }
-    </script>
-    <style>
+    <link href="css/index.css" rel="stylesheet">
+<style>
         @font-face {
             font-family: 'Euljiro';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/BMEULJIRO.woff') format('woff');
@@ -91,9 +49,9 @@
         }
 
         body {
-            background-color: theme('colors.background');
-            color: theme('colors.on-background');
-            font-family: theme('fontFamily.body');
+            background-color: #473636;
+            color: #eae1da;
+            font-family: 'Inter', sans-serif;
         }
         
         .ghost-border {
@@ -101,7 +59,7 @@
         }
 
         .text-gradient-primary {
-            background: linear-gradient(to right, theme('colors.primary'), theme('colors.primary-container'));
+            background: linear-gradient(to right, #ecc189, #cfa670);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -116,6 +74,40 @@
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(110, 66, 37, 0.15);
+        }
+
+        .visit-panel {
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
+            background-color: rgba(71, 54, 54, 0.78);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(236, 193, 137, 0.38);
+            box-shadow: 0 30px 75px rgba(23, 21, 21, 0.48), 0 0 0 1px rgba(234, 225, 218, 0.04), inset 0 1px 0 rgba(255, 239, 218, 0.08);
+        }
+
+        .visit-panel::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            width: 280px;
+            height: 280px;
+            top: -150px;
+            right: -110px;
+            border-radius: 999px;
+            background: radial-gradient(circle, rgba(236, 193, 137, 0.18) 0%, rgba(236, 193, 137, 0) 70%);
+            pointer-events: none;
+        }
+
+        .visit-panel::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            border-top: 1px solid rgba(236, 193, 137, 0.28);
+            background: linear-gradient(145deg, rgba(255, 239, 218, 0.035), transparent 42%);
+            pointer-events: none;
         }
         /* Scroll Animation Classes */
         .reveal-color {
@@ -143,6 +135,18 @@
             opacity: 1 !important;
             transform: translateY(0) !important;
         }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto !important; }
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+            .reveal-color { filter: none !important; opacity: 1 !important; }
+            .reveal-slide-up { opacity: 1 !important; transform: none !important; }
+        }
     </style>
 
     <!-- No-JS fallback: keep images visible if the scroll observer never runs -->
@@ -160,8 +164,8 @@
         "@type": "Restaurant",
         "name": "Hanshin Pocha",
         "alternateName": "한신포차",
-        "image": "images/main-2.jpeg",
-        "url": "https://hanshinpocha.com/",
+        "image": "https://hanshinchicago.com/images/optimized/main.webp",
+        "url": "https://hanshinchicago.com/",
         "telephone": "+1-847-981-1700",
         "servesCuisine": "Korean",
         "priceRange": "$$",
@@ -199,10 +203,11 @@
     </script>
 </head>
 <body class="antialiased overflow-x-hidden">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-sm focus:bg-primary focus:px-4 focus:py-3 focus:text-on-primary">Skip to content</a>
 
     <nav class="fixed top-0 w-full z-50 glass-panel transition-all duration-300">
         <div class="flex justify-between items-center px-6 md:px-8 py-2 w-full max-w-screen-2xl mx-auto">
-            <div class="text-4xl font-korean tracking-wider text-[#ecc189] leading-none">한신포차</div>
+            <a href="index.html" aria-label="Hanshin Pocha home" class="text-4xl font-korean tracking-wider text-[#ecc189] leading-none">한신포차</a>
             
             <div class="hidden md:flex items-center space-x-8">
                 <a href="#story" class="text-[#ecc189] font-headline tracking-wide text-sm font-semibold border-b border-[#ecc189] pb-0.5 transition-transform hover:scale-105">Our Story</a>
@@ -210,7 +215,7 @@
                 <a href="#location" class="text-[#eae1da]/80 font-headline tracking-wide text-sm font-medium hover:text-[#ecc189] transition-colors duration-300">Location</a>
             </div>
 
-            <button id="mobile-menu-btn" class="md:hidden text-primary p-2">
+            <button id="mobile-menu-btn" type="button" aria-label="Open navigation menu" aria-controls="mobile-menu" aria-expanded="false" class="md:hidden text-primary p-2">
                 <span class="material-symbols-outlined text-3xl">menu</span>
             </button>
         </div>
@@ -224,10 +229,10 @@
         </div>
     </nav>
 
-    <main class="w-full">
+    <main id="main-content" class="w-full">
         <section class="relative min-h-[90vh] flex items-center justify-center pt-24 pb-12 px-6 md:px-12 lg:px-24">
     <div class="absolute inset-0 z-0 overflow-hidden bg-surface-container-lowest">
-        <img src="images/main-2.jpeg" alt="Atmospheric dimly lit high-end restaurant" class="w-full h-full object-cover">
+        <img src="images/optimized/main.webp" width="1920" height="1440" fetchpriority="high" decoding="async" alt="Hanshin Pocha team outside the Arlington Heights restaurant" class="w-full h-full object-cover">
         
         <div class="absolute inset-0 bg-[#ecc189] mix-blend-multiply opacity-50"></div>
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background"></div>
@@ -253,29 +258,29 @@
     </div>
 </section>
 
-        <section id="story" class="bg-[#171515] py-32 px-6 md:px-12 lg:px-24 scroll-mt-24">
+        <section id="story" class="bg-[#1a1310] py-32 px-6 md:px-12 lg:px-24 scroll-mt-24">
             <div class="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
                 <div class="lg:col-span-5 space-y-8">
-                    <p class="font-label text-tertiary text-xs uppercase tracking-[0.2em] font-semibold">The Origin</p>
-                    <h2 class="font-headline text-3xl md:text-4xl lg:text-5xl font-light text-on-surface leading-tight">The Hearth of <br><span class="italic font-medium text-primary">Hanshin</span></h2>
+                    <p class="font-label text-tertiary text-xs uppercase tracking-[0.2em] font-semibold">Our Pocha</p>
+                    <h2 class="font-headline text-3xl md:text-4xl lg:text-5xl font-light text-on-surface leading-tight">Good Food, Cold Drinks, and a <span class="italic font-medium text-primary">Table Full of Friends</span></h2>
                     <div class="space-y-6 font-body text-base font-light text-on-surface-variant leading-relaxed">
-                        <p>It began not with a grand vision, but with a single pot simmering on a cold winter night in Seoul. The warmth of the broth drew strangers closer, turning them into confidants.</p>
-                        <p>Today, we recreate that intimacy. Our space is designed to feel like an extension of that original hearth—dark walnut, amber lights, and the clinking of glasses narrating stories untold.</p>
+                        <p>At Hanshin Pocha, we believe Korean food is best enjoyed together. Our menu is made for the table—bubbling hot pots, crispy fried favorites, savory grilled dishes, and plenty of soju to share.</p>
+                        <p>Whether you’re stopping in for dinner or settling in for a late night with friends, we want the room to feel lively, relaxed, and welcoming. Come hungry, order a few favorites, and stay as long as the conversation lasts.</p>
                     </div>
                 </div>
 
                 <div class="lg:col-span-7 relative h-[500px] md:h-[650px] w-full">
                     <div class="absolute top-0 right-0 w-4/5 h-4/5 bg-surface-container-low rounded-md overflow-hidden ghost-border z-10">
-                        <img src="images/about-1.jpeg" alt="Chef cooking in kitchen" class="w-full h-full object-cover reveal-color">
+                        <img src="images/optimized/about.webp" width="1200" height="1600" loading="lazy" decoding="async" alt="Hanshin Pocha table spread with hot pot and Korean dishes" class="w-full h-full object-cover reveal-color">
                     </div>
                     <div class="absolute bottom-0 left-0 w-3/5 h-3/5 bg-surface-container-high rounded-md p-2 ghost-border z-20 ambient-glow transform -translate-y-8 md:-translate-y-16">
-                        <img src="images/soju-1.jpeg" alt="Korean stew" class="w-full h-full object-cover rounded-sm">
+                        <img src="images/optimized/soju.webp" width="1200" height="1600" loading="lazy" decoding="async" alt="Guests toasting soju over a platter of fresh oysters" class="w-full h-full object-cover rounded-sm">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-32 bg-surface-container-lowest border-t border-outline-variant/10">
+        <section class="py-32 bg-[#1a1310] border-t border-outline-variant/10">
             <div class="max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24">
                 <div class="flex flex-col md:flex-row justify-between items-center md:items-end mb-20 gap-8 text-center md:text-left">
                     <div class="max-w-xl">
@@ -288,33 +293,33 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    <div class="group cursor-pointer reveal-slide-up">
+                    <div class="group reveal-slide-up">
                         <div class="relative h-[400px] mb-6 overflow-hidden rounded-sm bg-surface-container-low ghost-border">
-                            <img src="images/chicken-2.jpeg" alt="Korean Fried Chicken" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-80 group-hover:opacity-100">
+                            <img src="images/optimized/chicken.webp" width="1200" height="1600" loading="lazy" decoding="async" alt="Korean Fried Chicken" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-80 group-hover:opacity-100">
                             <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
                         </div>
                         <div class="pl-5 border-l border-primary/30 -mt-16 relative z-10 bg-surface-container-lowest/90 backdrop-blur-md p-6 w-11/12 mx-auto shadow-2xl">
                             <p class="font-label text-primary/80 text-[10px] font-semibold uppercase tracking-[0.2em] mb-3">Signature</p>
                             <h3 class="font-headline font-medium text-2xl text-on-surface mb-3">Korean Fried Chicken</h3>
-                            <p class="font-body text-on-surface-variant font-light leading-relaxed text-sm">Our legendary korean fried chicken, perfectly crispy on the outside and juicy on the inside.</p>
+                            <p class="font-body text-on-surface-variant font-light leading-relaxed text-sm">Crispy Korean-style fried chicken, golden on the outside and juicy inside.</p>
                         </div>
                     </div>
 
-                    <div class="group cursor-pointer md:mt-16 reveal-slide-up md:delay-200">
+                    <div class="group md:mt-16 reveal-slide-up md:delay-200">
                         <div class="relative h-[400px] mb-6 overflow-hidden rounded-sm bg-surface-container-low ghost-border">
-                            <img src="images/chadol-2.jpg" alt="Pork Stew" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-80 group-hover:opacity-100">
+                            <img src="images/optimized/chadol.webp" width="1000" height="700" loading="lazy" decoding="async" alt="Sliced beef brisket" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-80 group-hover:opacity-100">
                             <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
                         </div>
                         <div class="pl-5 border-l border-primary/30 -mt-16 relative z-10 bg-surface-container-lowest/90 backdrop-blur-md p-6 w-11/12 mx-auto shadow-2xl">
                             <p class="font-label text-primary/80 text-[10px] font-semibold uppercase tracking-[0.2em] mb-3">Comfort</p>
                             <h3 class="font-headline font-medium text-2xl text-on-surface mb-3">Beef Brisket</h3>
-                            <p class="font-body text-on-surface-variant font-light leading-relaxed text-sm">Thinly sliced beef brisket cooked table side, Korean BBQ style, served with variety of side dishes.</p>
+                            <p class="font-body text-on-surface-variant font-light leading-relaxed text-sm">Thinly sliced beef brisket cooked tableside, Korean BBQ style, and served with a variety of side dishes.</p>
                         </div>
                     </div>
 
-                    <div class="group cursor-pointer reveal-slide-up md:delay-500">
+                    <div class="group reveal-slide-up md:delay-500">
                         <div class="relative h-[400px] mb-6 overflow-hidden rounded-sm bg-surface-container-low ghost-border">
-                            <img src="images/bokki-1.jpeg" alt="Drinks" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-80 group-hover:opacity-100">
+                            <img src="images/optimized/tteokbokki.webp" width="1200" height="1600" loading="lazy" decoding="async" alt="Spicy Korean rice cakes in sauce" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-80 group-hover:opacity-100">
                             <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
                         </div>
                         <div class="pl-5 border-l border-primary/30 -mt-16 relative z-10 bg-surface-container-lowest/90 backdrop-blur-md p-6 w-11/12 mx-auto shadow-2xl">
@@ -333,7 +338,7 @@
             <div class="max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-24 relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                     
-                    <div class="glass-panel p-10 md:p-14 rounded-md shadow-2xl">
+                    <div class="visit-panel p-10 md:p-14 rounded-md">
                         <div class="mb-12">
                             <p class="font-label text-tertiary text-xs uppercase tracking-[0.2em] font-semibold mb-4">Visit Us</p>
                             <h2 class="font-headline text-3xl md:text-4xl lg:text-5xl font-light text-on-surface leading-tight mb-4">Find Your <span class="italic font-medium text-primary">Sanctuary</span></h2>
@@ -389,7 +394,7 @@
                     </div>
 
                     <div class="relative h-[500px] rounded-md overflow-hidden ghost-border bg-surface-container-low group shadow-2xl">
-                        <img src="images/directions-1.jpeg" alt="Restaurant interior at night" class="w-full h-full object-cover object-[20%_center] reveal-color group-hover:scale-105 transition-transform duration-1000">
+                        <img src="images/optimized/directions.webp" width="1600" height="1200" loading="lazy" decoding="async" alt="Hanshin Pocha storefront sign in Arlington Heights" class="w-full h-full object-cover object-[20%_center] reveal-color group-hover:scale-105 transition-transform duration-1000">
                         <div class="absolute bottom-8 left-8 right-8 glass-panel p-6 rounded-sm flex justify-between items-center transform translate-y-2 opacity-90 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                             <div>
                                 <p class="font-headline text-xl text-on-surface mb-1">Get Directions</p>
@@ -408,13 +413,13 @@
 
     </main>
 
-    <footer class="bg-[#171515] w-full rounded-none border-t border-outline-variant/20 relative z-10">
+    <footer class="bg-[#1a1310] w-full rounded-none border-t border-outline-variant/20 relative z-10">
         <div class="px-6 md:px-12 py-16 md:py-20 w-full max-w-screen-2xl mx-auto flex flex-col md:flex-row md:justify-between md:items-end gap-12">
 
             <div class="md:max-w-md">
                 <h4 class="text-4xl font-korean text-[#ecc189] tracking-wider mb-6">한신포차</h4>
                 <p class="font-body text-base font-light leading-relaxed text-[#eae1da]/70">
-                    Creating modern korean pocha experience with bold flavors and vibrant atmosphere. Join us for unforgettable nights of warmth, authentic flavors, and shared stories.
+                    A modern Korean pocha experience with bold flavors, cold drinks, and a lively atmosphere made for sharing.
                 </p>
             </div>
 
@@ -436,10 +441,23 @@
 
         btn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
-            if (menu.classList.contains('hidden')) {
+            const isOpen = !menu.classList.contains('hidden');
+            btn.setAttribute('aria-expanded', String(isOpen));
+            btn.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+            if (!isOpen) {
                 icon.textContent = 'menu';
             } else {
                 icon.textContent = 'close';
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && !menu.classList.contains('hidden')) {
+                menu.classList.add('hidden');
+                btn.setAttribute('aria-expanded', 'false');
+                btn.setAttribute('aria-label', 'Open navigation menu');
+                icon.textContent = 'menu';
+                btn.focus();
             }
         });
     </script>

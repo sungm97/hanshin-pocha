@@ -1,0 +1,11 @@
+{
+  "name": "hanshin-pocha-site",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -c tailwind.index.config.js -i ./styles/tailwind.css -o ./css/index.css --minify && tailwindcss -c tailwind.interior.config.js -i ./styles/tailwind.css -o ./css/interior.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.17"
+  }
+}
+

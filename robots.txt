@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /code.html
+Disallow: /screen.png
+
+Sitemap: https://hanshinchicago.com/sitemap.xml
+
